@@ -1,27 +1,4 @@
-# Robots.txt para KLEAR STUDIO - Top Barber Shop
-# Generado para optimización SEO
-
-# Permitir a todos los motores de búsqueda acceder al sitio
 User-agent: *
 Allow: /
-
-# Especificar la ubicación del sitemap
-Sitemap: https://christianmolina.pages.dev/sitemap.xml
-
-# Bloquear acceso a archivos sensibles (si los hubiera)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-
-# Instrucciones específicas para bots comunes
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Crawl-delay para reducir la carga del servidor (opcional)
-# Crawl-delay: 1
+Disallow: /images/
+Sitemap: https://personalizados.pages.dev/sitemap.xml

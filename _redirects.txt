@@ -1,3 +1,7 @@
+# Redirigir todo tráfico HTTP a HTTPS
+http://personalizados.pages.dev/* https://personalizados.pages.dev/:splat 301!
+
+# Regla SPA (Single Page Application)
+# Si el usuario entra a una sección que no es archivo (ej: /camisetas), 
+# carga el index.html para que la web muestre el contenido correcto.
 /* /index.html 200
-/sitemap.xml https://raw.githubusercontent.com/bboymak3/christianmolina/main/sitemap.xml 200
-/robots.txt https://raw.githubusercontent.com/bboymak3/christianmolina/main/robots.txt 200
