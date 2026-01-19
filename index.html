@@ -1,515 +1,751 @@
 <!DOCTYPE html>
-<html lang="es-VE">
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título y SEO Técnico para Barinas -->
+    <title>Suéteres y Camisetas Personalizadas | Estado Barinas</title>
+    <meta name="description" content="Personaliza tu estilo en Barinas. Suéteres, buzos y camisetas personalizadas para familias, parejas y eventos. Envíos a todo el estado. Llama al +58 426-1728306.">
+    <meta name="keywords" content="camisetas personalizadas barinas, sueteres venezuela, regalos personalizados, estampados de camisas, camisetas familia, barinas, obispos, socopo, santa barbara, buzos personalizados">
+    <meta name="geo.region" content="VE-BARINAS">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://estilosgrado33.pages.dev/">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZGQBRSLN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Favicon: Logo de la carpeta images -->
+    <link rel="icon" type="image/jpeg" href="images/logo-grado33.jpg">
 
-  gtag('config', 'G-4ZGQBRSLN4');
-</script>
+    <!-- Estilos CSS -->
+    <style>
+        /* --- VARIABLES --- */
+        :root {
+            /* CAMBIO AQUI: Color Principal ahora es Rojo */
+            --primary: #c0392b; 
+            
+            --secondary: #2c3e50;
+            
+            /* Color secundario Dorado (Combina perfecto con el rojo) */
+            --accent: #f1c40f; 
+            --accent-hover: #b7950b;
+            
+            --text-dark: #1a1a1a;
+            --text-gray: #555555;
+            --bg-light: #f4f4f4;
+            --white: #ffffff;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --max-width: 1200px;
+            --header-height: 80px;
+        }
 
+        /* --- RESET --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CHRISTIAN MOLINA 🟢 Publicidad Creativa | Expertos en Artes Gráficas | Barinas</title>
-  <meta name="description" content="Expertos en artes gráficas y publicidad convencional en Barinas. Creamos lonas, pancartas, vallas publicitarias, sellos personalizados y más. ¡Cotiza tu proyecto ahora!">
-  <link rel="canonical" href="https://christianmolina.pages.dev/"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="css/styles.css"/>
-  
-  <!-- Script de Elfsight para Reseñas (Opcional, si lo agregas en el futuro) -->
-  <!-- <script src="https://elfsightcdn.com/platform.js" async></script> -->
+        /* --- UTILITIES --- */
+        .container { width: 95%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-40 { margin-bottom: 40px; }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "CHRISTIAN MOLINA 🟢 Publicidad Creativa",
-    "image": "https://christianmolina.pages.dev/images/logo2.png",
-    "telephone": "+584143544153",
-    "email": "contacto@christianmolina.com.ve",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Barinas",
-      "addressCountry": "VE"
-    },
-    "url": "https://christianmolina.pages.dev",
-    "description": "Expertos en artes gráficas y publicidad convencional en Barinas. Creamos lonas, pancartas, vallas publicitarias, sellos personalizados y más. ¡Cotiza tu proyecto ahora!",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "17:00"
-    },
-    "areaServed": "Barinas, incluyendo todos sus municipios: Alberto Arvelo Torrealba, Andrés Eloy Blanco, Antonio José de Sucre, Arismendi, Barinas, Bolívar, Cruz Paredes, Ezequiel Zamora, Obispos, Pedraza, Rojas, Sosa."
-  }
-  </script>
+        /* Tipografía */
+        h1, h2, h3 { font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: -1px; }
+        h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; text-align: center; position: relative; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background-color: var(--accent); margin: 15px auto 0; border-radius: 2px; }
+        h3 { font-size: 1.5rem; color: var(--secondary); margin-bottom: 15px; }
+        p { margin-bottom: 15px; font-size: 1.05rem; color: var(--text-gray); }
+
+        /* Botones */
+        .btn {
+            display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none;
+            font-weight: 700; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: none;
+            text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-primary { background-color: var(--primary); color: var(--white); }
+        .btn-primary:hover { background-color: #a93226; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(192, 57, 43, 0.3); }
+        .btn-accent { background-color: var(--accent); color: var(--primary); }
+        .btn-accent:hover { background-color: var(--accent-hover); transform: translateY(-3px); }
+        .btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background-color: var(--primary); color: white; }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(255,255,255,0.98);
+            height: var(--header-height);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05); display: flex; align-items: center;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        
+        /* LOGO: Imagen de la carpeta */
+        .logo-container img { height: 50px; width: auto; } 
+
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 1rem; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        
+        .mobile-menu-btn { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--primary); }
+
+        /* --- HERO --- */
+        .hero {
+            height: 85vh;
+            min-height: 600px;
+            /* Fondo con imagen local + capa oscura */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('images/portada-grado33-tienda-de-buzos-personalziados-en-rionegro.jpg');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            color: white; padding-top: var(--header-height);
+        }
+        .hero-content { max-width: 900px; padding: 20px; }
+        .hero-content h1 { margin-bottom: 20px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero-content p { font-size: 1.3rem; color: #f0f0f0; margin-bottom: 40px; font-weight: 300; }
+
+        /* --- MUNICIPIOS (SEO BARINAS) --- */
+        .municipios-section { background-color: var(--bg-light); padding: 30px 0; border-bottom: 1px solid #ddd; }
+        .municipios-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; }
+        .municipios-list li { background: white; padding: 6px 12px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-size: 0.85rem; font-weight: 600; color: var(--primary); border: 1px solid #eee; }
+
+        /* --- CATEGORIES GRID --- */
+        .category-intro { max-width: 800px; margin: 0 auto 50px auto; text-align: center; }
+        
+        .cat-section-title { 
+            font-size: 2rem; color: var(--primary); margin: 70px 0 30px 0; 
+            text-align: left; border-left: 5px solid var(--accent); padding-left: 15px; 
+        }
+        
+        .card-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; 
+        }
+        
+        .product-card {
+            background: var(--white); border-radius: 15px; overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.4s ease; display: flex; flex-direction: column;
+        }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        
+        .card-img-wrapper { 
+            height: 320px; overflow: hidden; position: relative; background-color: #eee; 
+            display: flex; align-items: center; justify-content: center;
+        }
+        .card-img-wrapper img { 
+            width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; 
+            max-width: 100%;
+        }
+        .product-card:hover .card-img-wrapper img { transform: scale(1.05); }
+        
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-body p { font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+
+        /* --- GALERÍA DE CAMISETAS (GRID DENSO) --- */
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-bottom: 60px;
+        }
+
+        /* --- BLOG / GUIDES --- */
+        .blog-section { background-color: var(--bg-light); }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .blog-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+        .blog-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .blog-tag { background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; font-weight: bold; display: inline-block; margin-bottom: 15px; }
+
+        /* --- FAQ SECTION --- */
+        .faq-section { background-color: var(--white); }
+        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .faq-item:last-child { border-bottom: none; }
+        
+        details { cursor: pointer; }
+        summary { font-weight: 700; font-size: 1.2rem; color: var(--primary); list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; font-size: 1.5rem; color: var(--accent); transition: 0.3s; }
+        details[open] summary::after { content: '-'; transform: rotate(180deg); }
+        
+        .faq-content { padding: 10px 0 0 0; color: var(--text-gray); font-size: 1rem; }
+
+        /* --- SEASONAL BANNER --- */
+        .seasonal-banner {
+            background: linear-gradient(to right, var(--primary), #c0392b);
+            color: white; padding: 60px 0; text-align: center;
+        }
+
+        /* --- FOOTER --- */
+        footer { background-color: var(--primary); color: #ccc; padding: 70px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 50px; }
+        .footer-col h4 { color: white; font-size: 1.2rem; margin-bottom: 25px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: #ccc; text-decoration: none; transition: 0.3s; }
+        .footer-col a:hover { color: var(--accent); padding-left: 5px; }
+
+        /* --- WHATSAPP --- */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; background-color: #25d366;
+            color: white; width: 65px; height: 65px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 2.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 2000; transition: transform 0.3s; text-decoration: none;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            h1 { font-size: 2.2rem; }
+            .hero-content p { font-size: 1.1rem; }
+            .cat-section-title { text-align: center; border-left: none; border-bottom: 3px solid var(--accent); padding-left: 0; padding-bottom: 10px; margin-top: 50px; }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: var(--header-height); left: 0; width: 100%; background: white; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+            .nav-menu.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container nav-container">
-    <a href="#inicio" class="logo">
-      <div class="logo-img">CM</div>
-      <div>
-        <div class="logo-text">CHRISTIAN MOLINA</div>
-        <div class="logo-subtext">Publicidad Creativa</div>
-      </div>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <!-- LOGO: Imagen local -->
+            <a href="#" class="logo-container">
+                <img src="images/logo-grado33.jpg" alt="Estilos Grado33 Logo">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Menú" onclick="toggleMenu()">☰</button>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+                    <li><a href="#sueteres" onclick="toggleMenu()">Suéteres</a></li>
+                    <li><a href="#camisetas" onclick="toggleMenu()">Camisetas</a></li>
+                    <li><a href="#proceso" onclick="toggleMenu()">Cómo Pedir</a></li>
+                    <li><a href="https://wa.me/584261728306" class="btn btn-accent" style="padding: 10px 20px;">Pedir Ahora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Barra de Municipios (SEO Barinas) -->
+    <div class="municipios-section">
+        <div class="container text-center">
+            <p style="margin-bottom: 20px; font-weight: bold; color: var(--primary);">Cubrimos todo el Estado Barinas y envíos nacionales</p>
+            <ul class="municipios-list">
+                <li>Barinas</li> <li>Santa Bárbara</li> <li>Obispos</li> <li>Socopó</li> <li>Arismendi</li>
+                <li>Bolívar</li> <li>Cruz Paredes</li> <li>Ezequiel Zamora</li> <li>Pedro Briceño</li>
+                <li>Rojas</li> <li>Sosa</li> <li>Alberto Arvelo</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <!-- H1 ACTUALIZADO -->
+            <h1>Suéteres y Camisetas Personalizadas en Barinas</h1>
+            <!-- Contenido Generado: Página Principal -->
+            <p>¡Tu estilo, tu diseño! 🖌️🔥 En nuestra tienda especializada en **suéteres y camisetas personalizadas**, tú eres el diseñador. **Elige cualquier modelo (Adidas, Nike, Oversize, Lana) y **personalízalo con tu imagen, logo o texto**. Calidad profesional de estampado. ¡Sé único!</p>
+            <div style="margin-top: 30px;">
+                <a href="#camisetas" class="btn btn-accent">🎨 ¡COMENZAR A PERSONALIZAR!</a>
+                <a href="#proceso" class="btn btn-outline" style="color: white; border-color: white;">Ver Proceso</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Catalog / Categorias de Suéteres -->
+    <section id="sueteres" class="section-padding">
+        <div class="container">
+            <div class="category-intro">
+                <h2>Categorías de Suéteres</h2>
+                <p>Selecciona el suéter (buzo) base para tu diseño personalizado.</p>
+            </div>
+
+            <!-- CATEGORIA 1: POR MARCA (Usando imágenes de damas) -->
+            <h3 class="cat-section-title">Suéteres de Marca para Personalizar</h3>
+            <div class="card-grid">
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama01.jpg" alt="Suéter Adidas Mujer"></div>
+                    <div class="card-body">
+                        <h3>Suéteres Adidas y Nike</h3>
+                        <p>¿Quieres un buzo adidas mujer con tu toque único? 🏆 Personaliza los modelos más buscados. Buzos Adidas (Essentials, Originals) y Buzos Nike (Icon Clash, Running). ✅ Elige el modelo de marca, añade tu diseño y recíbelo en casa.</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20personalizar%20un%20sueter%20de%20marca" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama02.jpg" alt="Suéter Puma Mujer"></div>
+                    <div class="card-body">
+                        <h3>Estilo Deportivo Puma</h3>
+                        <p>Buzos Puma de estilo deportivo y casual. Perfectos para estampar logos de gimnasio, equipos deportivos o frases motivadoras con acabados profesionales.</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20Puma" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama03.jpg" alt="Suéter Running Mujer"></div>
+                    <div class="card-body">
+                        <h3>Tecnología Running</h3>
+                        <p>Para las que entrenan. Modelos técnicos de Nike y Adidas listos para recibir tu nombre o número en dorado o plateado.</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20Running" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CATEGORIA 2: OVERSIZE (Usando imágenes de caballeros) -->
+            <h3 class="cat-section-title">Suéteres Oversize Personalizados</h3>
+            <div class="card-grid">
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero01.jpg" alt="Suéter Oversize Hombre"></div>
+                    <div class="card-body">
+                        <h3>La Tendencia Oversize</h3>
+                        <p>La tendencia oversize, ahora con tu identidad. 🌀 Nuestros suéteres oversize en algodón premium son la canvas perfecta para tu creatividad. Tienen gran superficie para estampados grandes, ideales para diseños con frases o ilustraciones. ✨ ¡Haz que tu estilo oversize sea inconfundible!</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20personalizar%20un%20Oversize" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero02.jpg" alt="Suéter Oversize Urbano"></div>
+                    <div class="card-body">
+                        <h3>Streetwear Personalizado</h3>
+                        <p>Disponibles en todos los colores para personalizar. Elige la tela base y envíanos tu arte urbano para un look único.</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20Streetwear" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero03.jpg" alt="Suéter Oversize Negro"></div>
+                    <div class="card-body">
+                        <h3>Base en Negro y Gris</h3>
+                        <p>Las bases oscuras son las mejores para diseños vibrantes. Personaliza tu oversize con neones, blancos o colores metálicos.</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20Oversize%20negro" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CATEGORIA 3: LANA (Usando imágenes de pareja) -->
+            <h3 class="cat-section-title">Suéteres de Lana Personalizados</h3>
+            <div class="card-grid">
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja01.jpg" alt="Suéter Lana Navidad"></div>
+                    <div class="card-body">
+                        <h3>Calidez con Tu Firma</h3>
+                        <p>Calidez que lleva tu firma. ❄️ Los suéteres de lana más abrigados ahora pueden ser personalizados. Lana de alta calidad para estampados nítidos. Perfectos para diseños navideños, familiares o logos de empresa. 🔥 ¡Personaliza el suéter que te acompañará todo el invierno!</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20personalizar%20un%20sueter%20de%20lana" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja02.jpg" alt="Suéter Lana Cuello Tortuga"></div>
+                    <div class="card-body">
+                        <h3>Opciones de Cuello y Cortes</h3>
+                        <p>Opciones de cuello tortuga, capucha y largos. Elige el corte que más te abrigue y añade tu diseño preferido.</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20de%20lana%20corto" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja03.jpg" alt="Suéter Lana Familia"></div>
+                    <div class="card-body">
+                        <h3>Conjuntos Familiares</h3>
+                        <p>Personaliza el suéter de lana para toda la familia (Papá, Mamá, Hijos). El regalo más cálido y original para estas fiestas en Barinas.</p>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20sueteres%20de%20lana%20familiares" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Personalizar</a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN GALERÍA DE CAMISETAS (Usando la lista larga) -->
+    <section id="camisetas" class="section-padding" style="background-color: #fafafa;">
+        <div class="container">
+            <h2 class="text-center">Galería de Camisetas Personalizadas</h2>
+            <p class="text-center mb-40" style="max-width:800px; margin-left:auto; margin-right:auto;">
+                Diseña el tuyo. Tenemos camisetas para familias, parejas, cumpleaños, aniversarios y más. 
+                Elige el modelo de la galería y personalízalo con tu logo o foto.
+            </p>
+
+            <!-- GRID MASIVO DE CAMISETAS -->
+            <div class="gallery-grid">
+                
+                <!-- camisa-estampadas-para-familia -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Camisa Familia"></div>
+                    <div class="card-body">
+                        <h3>Estampadas para Familia</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-mecanico-personalizada -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-mecanico-personalizada.jpg" alt="Camisa Mecánico"></div>
+                    <div class="card-body">
+                        <h3>Camisa Mecánico</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-dinosaurio -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-dinosaurio.jpg" alt="Camisa Dinosaurio"></div>
+                    <div class="card-body">
+                        <h3>Camisa Dinosaurio</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-familia -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Camisa Familia"></div>
+                    <div class="card-body">
+                        <h3>Camisa Familia</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-minnie -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-minnie.jpg" alt="Camisa Minnie"></div>
+                    <div class="card-body">
+                        <h3>Camisa Minnie</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-navidad -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-navidad.jpg" alt="Camisa Navidad"></div>
+                    <div class="card-body">
+                        <h3>Camisa Navidad</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-pareja -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-pareja.jpg" alt="Camisa Pareja"></div>
+                    <div class="card-body">
+                        <h3>Camisa Pareja</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-sonic -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-sonic.jpg" alt="Camisa Sonic"></div>
+                    <div class="card-body">
+                        <h3>Camisa Sonic</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-spiderman -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-spiderman.jpg" alt="Camisa Spiderman"></div>
+                    <div class="card-body">
+                        <h3>Camisa Spiderman</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-de-unicornio -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-unicornio.jpg" alt="Camisa Unicornio"></div>
+                    <div class="card-body">
+                        <h3>Camisa Unicornio</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-para-cumpleaños -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-cumpleaños.jpg" alt="Camisa Cumpleaños"></div>
+                    <div class="card-body">
+                        <h3>Cumpleaños</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-para-el-dia-del-padre -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-el-dia-del-padre.jpg" alt="Día del Padre"></div>
+                    <div class="card-body">
+                        <h3>Día del Padre</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-para-familia -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-familia.jpg" alt="Familia"></div>
+                    <div class="card-body">
+                        <h3>Para Familia</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-para-papa -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-papa.jpg" alt="Para Papá"></div>
+                    <div class="card-body">
+                        <h3>Para Papá</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-para-pareja -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-pareja.jpg" alt="Para Pareja"></div>
+                    <div class="card-body">
+                        <h3>Para Pareja</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizada-para-parejas -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-parejas.jpg" alt="Parejas"></div>
+                    <div class="card-body">
+                        <h3>Parejas</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-personalizadas-para-familia -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizadas-para-familia.jpg" alt="Familias"></div>
+                    <div class="card-body">
+                        <h3>Familias</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-sublimada-con-foto -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-sublimada-con-foto.jpg" alt="Sublimada Foto"></div>
+                    <div class="card-body">
+                        <h3>Sublimada Foto</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisa-sublimada-personalizada -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-sublimada-personalizada.jpg" alt="Sublimada"></div>
+                    <div class="card-body">
+                        <h3>Sublimada</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisas-aniversario -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisas-aniversario.jpg" alt="Aniversario"></div>
+                    <div class="card-body">
+                        <h3>Aniversario</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisas-blancas-personalizadas -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisas-blancas-personalizadas.jpg" alt="Blancas"></div>
+                    <div class="card-body">
+                        <h3>Blancas</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisas-bordadas-para-empresas -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisas-bordadas-para-empresas.jpg" alt="Bordadas Empresas"></div>
+                    <div class="card-body">
+                        <h3>Bordadas Empresas</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisas-columbia-personalizadas -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisas-columbia-personalizadas.jpg" alt="Columbia"></div>
+                    <div class="card-body">
+                        <h3>Columbia</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisas-con-foto -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisas-con-foto.jpg" alt="Con Foto"></div>
+                    <div class="card-body">
+                        <h3>Con Foto</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisas-de-cumpleaños-para-familia -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisas-de-cumpleaños-para-familia.jpg" alt="Cumpleaños Familia"></div>
+                    <div class="card-body">
+                        <h3>Cumpleaños Familia</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+                <!-- camisas-de-cumpleaños-para-hombre -->
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisas-de-cumpleaños-para-hombre.jpg" alt="Cumpleaños Hombre"></div>
+                    <div class="card-body">
+                        <h3>Cumpleaños Hombre</h3>
+                        <a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Personalizar</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. GUÍA DE PERSONALIZACIÓN (PASOS) -->
+    <section id="proceso" class="section-padding blog-section">
+        <div class="container">
+            <h2>Cómo Personalizar tu Prenda en 3 Pasos</h2>
+            <p class="text-center mb-40">Es muy fácil crear tu diseño único con nosotros desde Barinas.</p>
+            
+            <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <article class="blog-card text-center">
+                    <h3>1️⃣ Elige y Contáctanos</h3>
+                    <p>Selecciona la camiseta o suéter de la galería que te guste y escríbenos al WhatsApp.</p>
+                </article>
+                <article class="blog-card text-center">
+                    <h3>2️⃣ Sube tu Diseño</h3>
+                    <p>Usa nuestro creador online (o escríbenos por WhatsApp) para subir tu imagen, elegir fuentes o crear frases. ¡Sé creativa!</p>
+                </article>
+                <article class="blog-card text-center">
+                    <h3>3️⃣ Revisa y Recibe</h3>
+                    <p>Te enviamos una prueba virtual de cómo quedará tu pedido. ¡Apruébalo, produciremos y lo enviaremos a tu casa!</p>
+                </article>
+            </div>
+            
+            <div class="text-center mb-40">
+                <p>➡️ **También personalizamos:** *Camisetas personalizadas para mujer, blusas sublimadas, hoodies y más.*</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BLOG / SEO CONTENT -->
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <h2>Ideas y Consejos de Personalización</h2>
+            <div class="blog-grid">
+                <!-- Articulo 1 -->
+                <article class="blog-card">
+                    <span class="blog-tag">Inspiración</span>
+                    <h3>10 Ideas para Diseñar tu Suéter</h3>
+                    <p>¿No sabes qué poner? Aquí tienes ideas creativas: fotos de viajes inolvidables, nombres de hijos con tipografía artística, diseños de anime, frases motivadoras o logos para tus emprendimientos.</p>
+                    <a href="https://wa.me/584261728306" style="color:var(--accent); font-weight:bold; text-decoration:none;">Empezar diseño &rarr;</a>
+                </article>
+
+                <!-- Articulo 2 -->
+                <article class="blog-card">
+                    <span class="blog-tag">Regalos</span>
+                    <h3>¿Por qué un Suéter Personalizado es el Mejor Regalo?</h3>
+                    <p>Nada supera la originalidad. Son perfectos para cumpleaños, despedidas y amigas secretas. Ejemplos populares son suéteres para mejores amigos hombre y mujer con fotos interiores divertidas.</p>
+                    <a href="https://wa.me/584261728306" style="color:var(--accent); font-weight:bold; text-decoration:none;">Regalar ahora &rarr;</a>
+                </article>
+
+                <!-- Articulo 3 -->
+                <article class="blog-card">
+                    <span class="blog-tag">Guía Técnica</span>
+                    <h3>Diferencias entre Suéteres para Personalizar</h3>
+                    <p>¿Qué tela elegir? <strong>Algodón:</strong> Para estampados clásicos (serigrafía). <strong>Lana:</strong> Para invierno y bordados. <strong>Poliéster (Oversize):</strong> Para sublimación a todo color. Guía técnica para elegir la tela base según tu diseño.</p>
+                    <a href="https://wa.me/584261728306" style="color:var(--accent); font-weight:bold; text-decoration:none;">Consultar tela &rarr;</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / Politicas (Manteniendo lógica de pagos anterior) -->
+    <section id="faq" class="section-padding faq-section">
+        <div class="container" style="max-width: 900px;">
+            <h2>Preguntas Frecuentes y Pagos</h2>
+            
+            <div class="faq-item">
+                <details>
+                    <summary>¿Cómo envío mi material para el diseño?</summary>
+                    <div class="faq-content">Contactas al vendedor por WhatsApp y nos envías el material digital de tu requerimiento. Esto puede ser fotos de nuestros archivos, alguna imagen referencial que tengas a la mano, o bocetos.</div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary>¿Veo cómo quedará mi diseño antes de producirlo?</summary>
+                    <div class="faq-content">Sí, totalmente. Nuestro equipo de diseño crea una muestra digital y te mostramos cómo va a quedar el diseño en digital de tu pedido. Una vez lo apruebes, pasamos a producción.</div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary>¿Cuánto debo pagar para empezar a trabajar?</summary>
+                    <div class="faq-content">Para empezar a trabajar en tu pedido (especialmente si es personalizado), solicitas un depósito del 50%. Esto nos permite adquirir los materiales y reservar el espacio de producción.</div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary>¿Cómo funciona el pago restante y el envío?</summary>
+                    <div class="faq-content">Cuando el producto terminado esté listo, te enviamos fotos del producto termino. Solo previo al pago del 50% restante se realiza el envío. <br><em>Nota: Esto no aplica para pedidos a domicilio local donde todo se realiza con previo acuerdo.</em></div>
+                </details>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seasonal Banner -->
+    <section class="seasonal-banner">
+        <div class="container">
+            <h2>🎁 Regalos Inolvidables</h2>
+            <p>Personaliza camisetas para cumpleaños, San Valentín o Navidad. Sorprende a tu familia.</p>
+            <br>
+            <a href="https://wa.me/584261728306?text=Hola,%20quiero%20empezar%20a%20personalizar" class="btn btn-accent">Pedir Cotización</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-container" style="margin-bottom:20px;">
+                        <img src="images/logo-grado33.jpg" alt="Logo" style="filter: brightness(0) invert(1); height: 60px;">
+                    </div>
+                    <p>Expertos en estampado y sublimación en Barinas, Venezuela. No solo vendemos suéteres, ofrecemos la plataforma para crear la prenda EXACTA que imaginas.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#camisetas">Camisetas Familia</a></li>
+                        <li><a href="#camisetas">Camisetas Parejas</a></li>
+                        <li><a href="#sueteres">Suéteres</a></li>
+                        <li><a href="#proceso">Camisetas Personalizadas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📱 WhatsApp: +58 426-1728306</li>
+                        <li>📍 Barinas, Venezuela</li>
+                        <li>🚚 Envíos Nacionales</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="border-top: 1px solid #333; padding-top: 20px;">
+                <p>&copy; 2023 EstilosGrado33. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Actualizado a +58 426-1728306 -->
+    <a href="https://wa.me/584261728306" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse desktop-menu" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#servicios">Servicios</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="municipiosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Municipios
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="municipiosDropdown" style="max-height: 400px; overflow-y: auto;">
-            <li><a class="dropdown-item" href="#contacto">Alberto Arvelo Torrealba</a></li>
-            <li><a class="dropdown-item" href="#contacto">Andrés Eloy Blanco</a></li>
-            <li><a class="dropdown-item" href="#contacto">Antonio José de Sucre</a></li>
-            <li><a class="dropdown-item" href="#contacto">Arismendi</a></li>
-            <li><a class="dropdown-item" href="#contacto">Barinas</a></li>
-            <li><a class="dropdown-item" href="#contacto">Bolívar</a></li>
-            <li><a class="dropdown-item" href="#contacto">Cruz Paredes</a></li>
-            <li><a class="dropdown-item" href="#contacto">Ezequiel Zamora</a></li>
-            <li><a class="dropdown-item" href="#contacto">Obispos</a></li>
-            <li><a class="dropdown-item" href="#contacto">Pedraza</a></li>
-            <li><a class="dropdown-item" href="#contacto">Rojas</a></li>
-            <li><a class="dropdown-item" href="#contacto">Sosa</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#galeria">Galería</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacto">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a href="https://wa.me/584143544153" class="whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp me-2"></i> WhatsApp
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero-section" id="inicio">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-7">
-        <span class="hero-badge">Expertos en Artes Gráficas y Publicidad</span>
-        <h1 class="hero-title">Publicidad Creativa y de Alto Impacto <span class="text-accent">en Barinas</span></h1>
-        <p class="hero-subtitle">En Christian Molina, transformamos tus ideas en realidad. Creamos lonas, pancartas, vallas publicitarias y sellos que captan la atención y generan clientes. ¡Cobertura en todo el estado Barinas!</p>
-
-        <div class="stats-container">
-          <div class="row text-center">
-            <div class="col-4">
-              <div class="stat-item">
-                <div class="stat-number">+500</div>
-                <div class="stat-label">Proyectos Realizados</div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Satisfacción Garantizada</div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="stat-item">
-                <div class="stat-number">🏆</div>
-                <div class="stat-label">Calidad Superior</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="btn-group mt-4">
-          <a href="#contacto" class="btn btn-primary me-2">
-            <i class="fas fa-palette me-2"></i> Cotiza tu Proyecto
-          </a>
-          <a href="#galeria" class="btn btn-outline-light">
-            <i class="fas fa-images me-2"></i> Ver Trabajos
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <img src="images/logo2.png" alt="Logo de Christian Molina Publicidad Creativa" class="img-fluid rounded shadow">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICIOS DESTACADOS -->
-<section class="services-section" id="servicios">
-  <div class="container">
-    <h2 class="section-title">Nuestros Servicios de Artes Gráficas</h2>
-    <p class="section-subtitle">Ofrecemos soluciones integrales de publicidad convencional y artes gráficas para potenciar tu marca o negocio en Barinas.</p>
-    <div class="row g-4">
-      <!-- Servicio 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-          <h3 class="service-title">Lonas y Vallas Publicitarias</h3>
-          <p>En Christian Molina, entendemos que una <strong>lona publicitaria</strong> es mucho más que un trozo de tela; es el primer vendedor de tu negocio. Por eso, fabricamos <strong>lonas publicitarias</strong> de alta resistencia a los rayos UV y al clima tropical de Barinas, usando tintas de última generación que garantizan colores vivos y duraderos. Ya sea para una <strong>valla publicitaria</strong> en una vía principal o una <strong>lona para toldo</strong> en tu local, nuestro equipo de expertos en <strong>artes gráficas</strong> diseña, imprime e instala, asegurando que tu mensaje llegue a miles de ojos potenciales. Ofrecemos desde <strong>lonas microperforadas</strong> hasta <strong>lonas ignifugas</strong>, adaptándonos a cualquier necesidad de <strong>publicidad exterior</strong>. Solicita tu cotización y transforma la visibilidad de tu marca.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Lonas%20y%20Vallas%20Publicitarias." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 2 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-stamp"></i></div>
-          <h3 class="service-title">Sellos Personalizados y Trodat</h3>
-          <p>Proyecta profesionalismo y seguridad con nuestros <strong>sellos personalizados</strong>. Creamos sellos de goma, sellos automáticos y sellos de lacre para todo tipo de uso: desde un <strong>sello de empresa</strong> para validar documentos, hasta un <strong>sello trodat 4912</strong> para marcar facturas. Nuestros sellos son duraderos, de alta definición y podemos personalizarlos con tu logo, texto o diseño. Ideal para notarías, empresas, colegios y profesionales que buscan una imagen seria y confiable. También ofrecemos repuestos de tinta y almohadillas para sellos. Protege tu marca y tus documentos con la calidad que mereces.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Sellos%20Personalizados%20y%20Trodat." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 3 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-scroll"></i></div>
-          <h3 class="service-title">Talonarios y Facturas Fiscales</h3>
-          <p>Cumple con las normativas y organiza tu facturación de manera profesional. Ofrecemos <strong>talonarios facturas</strong> de alta calidad, numerados y personalizados con los datos de tu empresa. Diseñamos e imprimimos <strong>facturas fiscales</strong>, recibos de pago y libros de contabilidad según tus necesidades. Nuestros productos son ideales para taxis, empresas de transporte, tiendas y cualquier negocio que requiera un control riguroso de su documentación. Asegura la transparencia y el orden en tus operaciones con nuestros <strong>talonarios</strong> y sistemas de facturación.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Talonarios%20y%20Facturas%20Fiscales." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 4 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-          <h3 class="service-title">Calendarios y Agendas Personalizadas</h3>
-          <p>Mantén tu marca presente todo el año con nuestros <strong>calendarios personalizados</strong>. Perfectos para obsequios a clientes o para uso corporativo, nuestros calendarios están disponibles en varios formatos y tamaños, con una impresión de alta calidad que resalta tus logos y fechas importantes. También creamos <strong>agendas personalizadas</strong> para ejecutivos y estudiantes, convirtiéndolas en una poderosa herramienta de marketing y organización. Un <strong>calendario de pared</strong> o una agenda de bolsillo con tu marca es una forma constante de recordar a tus clientes que existes.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Calendarios%20y%20Agendas%20Personalizadas." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 5 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-medal"></i></div>
-          <h3 class="service-title">Litografía y Medallas Personalizadas</h3>
-          <p>Reconoce el mérito y celebra los logros con nuestras <strong>medallas personalizadas</strong> y trofeos. Utilizamos técnicas de <strong>litografía</strong> y grabado para crear piezas únicas y duraderas, perfectas para reconocimientos a empleados, premios, eventos deportivos o logros académicos. Nuestras medallas pueden ser de metal, acrílico o madera, y están disponibles en varios acabados. Ya sea una placa conmemorativa o un trofeo elegante, en Christian Molina creamos objetos de valor que perduran en el tiempo y llenan de orgullo a quien los recibe.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Litografía%20y%20Medallas%20Personalizadas." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 6 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-ad"></i></div>
-          <h3 class="service-title">Diseño y Rotulación de Vehículos</h3>
-          <p>Convierte tu vehículo en una plataforma publicitaria móvil y profesional. Ofrecemos servicios completos de <strong>rotulación de vehículos</strong>, desde el diseño gráfico hasta la instalación. Usamos vinilos de alta calidad que protegen la pintura original de tu auto y garantizan una duración excepcional. Ideal para empresas de delivery, taxis, transporte de personal o cualquier negocio que desee maximizar su visibilidad mientras se desplaza. Tu auto se convertirá en un anuncio llamativo que trabajará para ti las 24 horas del día.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Rotulación%20de%20Vehículos." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 7 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-building"></i></div>
-          <h3 class="service-title">Branding Corporativo Completo</h3>
-          <p>Construimos la identidad de tu marca desde cero. Nuestro servicio de <strong>branding corporativo</strong> incluye el diseño de logos, manual de identidad, papelería corporativa y señalización. Nos aseguramos de que tu marca tenga una apariencia coherente y profesional en todos los puntos de contacto. Desde la tarjeta de presentación hasta la fachada de tu oficina, creamos una imagen de marca sólida y memorable que te diferencie de la competencia. Deja en manos de nuestros expertos en <strong>artes gráficas</strong> la tarea de construir una marca poderosa.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Branding%20Corporativo." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 8 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-print"></i></div>
-          <h3 class="service-title">Impresión Digital y Offset</h3>
-          <p>Ofrecemos soluciones de <strong>impresión digital</strong> y <strong>offset</strong> para cubrir todas tus necesidades de papelería. Desde pequeños trabajos de impresión digital hasta grandes tiradas de offset para volantes, folletos y catálogos. Contamos con tecnología de impresión de última generación para garantizar colores vivos, detalles nítidos y acabados profesionales. Ya sea que necesites <strong>volantes publicitarios</strong> para una promoción o un catálogo de productos de alta calidad, nuestro equipo está listo para entregar resultados superiores en los plazos acordados.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Impresión%20Digital%20y%20Offset." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 9 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-cut"></i></div>
-          <h3 class="service-title">Pancartas y Avisos Comerciales</h3>
-          <p>Atrae a tus clientes con <strong>pancartas personalizadas</strong> y avisos comerciales llamativos. Diseñamos, fabricamos e instalamos <strong>pancartas publicitarias</strong> en una variedad de materiales como PVC, metacrilato o madera, adaptándonos a tu presupuesto y estilo. Son perfectas para anunciar ofertas, nuevos productos o simplemente para mejorar la fachada de tu negocio. Nuestros expertos en <strong>publicidad exterior</strong> te asesorarán para elegir el tamaño, material y diseño más efectivos para captar la atención de tu público objetivo.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Pancartas%20y%20Avisos%20Comerciales." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-      <!-- Servicio 10 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-palette"></i></div>
-          <h3 class="service-title">Artes Gráficas para Eventos</h3>
-          <p>Da a tu evento una identidad visual inolvidable. Nos especializamos en <strong>artes gráficas para eventos</strong> como bodas, cumpleaños, graduaciones o eventos corporativos. Creamos desde invitaciones y save the dates hasta <strong>pendones personalizados</strong>, backdrops para fotos, y decorados temáticos. Nos encargamos de todos los detalles gráficos para que tu celebración sea visualmente coherente y memorable. Deja que la creatividad de nuestro equipo haga de tu evento una experiencia inolvidable para todos tus invitados.</p>
-          <a href="https://wa.me/584143544153?text=Hola,%20quiero%20cotizar%20por%20Artes%20Gráficas%20para%20Eventos." class="btn btn-outline-primary mt-3">Cotizar Ahora</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POR QUÉ ELEGIRNOS -->
-<section class="why-us-section py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <img src="images/instalacion-valla-publicitaria-barinas.jpeg" alt="Instalación de valla publicitaria en Barinas por Christian Molina" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-lg-6">
-        <h2 class="section-title">¿Por Qué Elegir Christian Molina?</h2>
-        <p class="section-subtitle">Somos más que una imprenta, somos tu aliado estratégico en publicidad convencional en Barinas.</p>
-        <div class="row g-3 mt-2">
-          <div class="col-6">
-            <div class="d-flex align-items-start">
-              <i class="fas fa-map-marked-alt text-primary me-3 mt-1"></i>
-              <div>
-                <h6 class="mb-1">Cobertura en Todo Barinas</h6>
-                <p class="small text-muted mb-0">Ofrecemos nuestros servicios en todos los municipios del estado, desde Barinas hasta Alberto Arvelo Torrealba.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="d-flex align-items-start">
-              <i class="fas fa-shield-alt text-primary me-3 mt-1"></i>
-              <div>
-                <h6 class="mb-1">Calidad y Durabilidad</h6>
-                <p class="small text-muted mb-0">Usamos materiales de primera que resisten el clima tropical, garantizando colores vivos y una larga vida útil.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="d-flex align-items-start">
-              <i class="fas fa-lightbulb text-primary me-3 mt-1"></i>
-              <div>
-                <h6 class="mb-1">Diseño Creativo</h6>
-                <p class="small text-muted mb-0">No solo imprimimos, creamos conceptos visuales estratégicos que comunican tu mensaje de forma efectiva.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="d-flex align-items-start">
-              <i class="fas fa-handshake text-primary me-3 mt-1"></i>
-              <div>
-                <h6 class="mb-1">Asesoría Personalizada</h6>
-                <p class="small text-muted mb-0">Te acompañamos desde la idea hasta la instalación final, asegurando un resultado que supere tus expectativas.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALERÍA DE TRABAJOS -->
-<section id="galeria" class="gallery-section py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title">Galería de Proyectos</h2>
-    <p class="section-subtitle">Un vistazo a la calidad y creatividad que aplicamos en cada proyecto para nuestros clientes en Barinas.</p>
-    <div class="row g-4">
-      <!-- Imagen 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/diseno-pancarta-publicitaria-barinas.png" class="img-fluid rounded shadow" alt="Diseño de pancarta publicitaria">
-          <h4 class="gallery-item-title">Diseño de Pancarta Publicitaria</h4>
-          <p class="gallery-item-desc">Conceptualización y diseño de una pancarta atractiva para un local comercial en el centro de Barinas.</p>
-        </div>
-      </div>
-      <!-- Imagen 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/lona-impresa-para-negocio-barinas.jpeg" class="img-fluid rounded shadow" alt="Lona impresa para negocio">
-          <h4 class="gallery-item-title">Lona Publicitaria para Negocio</h4>
-          <p class="gallery-item-desc">Instalación de una lona publicitaria a medida en la fachada de un negocio en Barinas.</p>
-        </div>
-      </div>
-      <!-- Imagen 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/branding-corporativo-barinas.png" class="img-fluid rounded shadow" alt="Branding corporativo completo">
-          <h4 class="gallery-item-title">Branding Corporativo</h4>
-          <p class="gallery-item-desc">Desarrollo completo de imagen corporativa, desde el logo hasta la papelería y señalización.</p>
-        </div>
-      </div>
-      <!-- Imagen 4 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/rotulacion-vehiculo-barinas.png" class="img-fluid rounded shadow" alt="Rotulación de vehículo publicitario">
-          <h4 class="gallery-item-title">Rotulación de Vehículo</h4>
-          <p class="gallery-item-desc">Rotulación completa de un vehículo de transporte para publicidad móvil en Barinas.</p>
-        </div>
-      </div>
-      <!-- Imagen 5 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/concepto-lona-publicitaria-barinas.png" class="img-fluid rounded shadow" alt="Concepto de lona publicitaria">
-          <h4 class="gallery-item-title">Concepto de Lona Publicitaria</h4>
-          <p class="gallery-item-desc">Render 3D de un concepto de lona publicitaria para una campaña de lanzamiento.</p>
-        </div>
-      </div>
-      <!-- Imagen 6 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/instalacion-valla-publicitaria-barinas.jpeg" class="img-fluid rounded shadow" alt="Instalación de valla publicitaria">
-          <h4 class="gallery-item-title">Instalación de Valla Publicitaria</h4>
-          <p class="gallery-item-desc">Nuestro equipo profesional instalando una valla publicitaria en una vía principal de Barinas.</p>
-        </div>
-      </div>
-      <!-- Imagen 7 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/pancarta-ruta-publicitaria-barinas.jpeg" class="img-fluid rounded shadow" alt="Pancarta en ruta publicitaria">
-          <h4 class="gallery-item-title">Pancarta en Ruta Publicitaria</h4>
-          <p class="gallery-item-desc">Pancarta publicitaria estratégica ubicada en una ruta de alto flujo vehicular.</p>
-        </div>
-      </div>
-      <!-- Imagen 8 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/aviso-impreso-tienda-barinas.jpeg" class="img-fluid rounded shadow" alt="Aviso impreso para tienda">
-          <h4 class="gallery-item-title">Aviso Impreso para Tienda</h4>
-          <p class="gallery-item-desc">Aviso impreso de alta calidad colocado en la puerta de una tienda local.</p>
-        </div>
-      </div>
-      <!-- Imagen 9 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/rotulo-fachada-comercial-barinas.jpeg" class="img-fluid rounded shadow" alt="Rotulo de fachada comercial">
-          <h4 class="gallery-item-title">Rotulo de Fachada Comercial</h4>
-          <p class="gallery-item-desc">Rotulo de acero iluminado para la fachada de un comercio, mejorando su visibilidad nocturna.</p>
-        </div>
-      </div>
-      <!-- Imagen 10 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="gallery-item">
-          <img src="images/creacion-aviso-comercial-barinas.png" class="img-fluid rounded shadow" alt="Creación de aviso comercial">
-          <h4 class="gallery-item-title">Creación de Aviso Comercial</h4>
-          <p class="gallery-item-desc">Diseño gráfico de un aviso comercial llamativo para una campaña de marketing.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO / COTIZADOR -->
-<section class="contact-section" id="contacto">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 mb-4 mb-lg-0 text-white">
-        <h2 class="section-title text-white">Cotiza tu Proyecto Publicitario</h2>
-        <p class="text-white-50">¿Listo para llevar tu publicidad al siguiente nivel? Contáctanos para una cotización sin compromiso. Cuéntanos sobre tu proyecto y te sorprenderemos con una solución creativa y efectiva.</p>
-        <div class="contact-info">
-          <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-map-marker-alt me-3 text-primary"></i>
-            <span>Cobertura en todo el Estado Barinas</span>
-          </div>
-          <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-phone me-3 text-primary"></i>
-            <span>+58 414-354-4153</span>
-          </div>
-          <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-envelope me-3 text-primary"></i>
-            <span>contacto@christianmolina.com.ve</span>
-          </div>
-          <div class="d-flex align-items-center">
-            <i class="fas fa-clock me-3 text-primary"></i>
-            <span>Lun-Vie: 8:00 AM - 5:00 PM</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <form id="contactForm" class="contact-form needs-validation" novalidate>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="nombre" class="form-label">Nombre Completo</label>
-              <input type="text" class="form-control" id="nombre" required>
-            </div>
-            <div class="col-md-6">
-              <label for="telefono" class="form-label">Teléfono / WhatsApp</label>
-              <input type="tel" class="form-control" id="telefono" required>
-            </div>
-            <div class="col-12">
-              <label for="empresa" class="form-label">Nombre de tu Empresa (Opcional)</label>
-              <input type="text" class="form-control" id="empresa" placeholder="Ej: Mi Tienda S.A.">
-            </div>
-            <div class="col-md-6">
-              <label for="servicio" class="form-label">Tipo de Servicio</label>
-              <select class="form-select" id="servicio" required>
-                <option value="" selected disabled>Selecciona un servicio...</option>
-                <option value="Lonas y Vallas Publicitarias">Lonas y Vallas Publicitarias</option>
-                <option value="Sellos Personalizados y Trodat">Sellos Personalizados y Trodat</option>
-                <option value="Talonarios y Facturas Fiscales">Talonarios y Facturas Fiscales</option>
-                <option value="Calendarios y Agendas">Calendarios y Agendas</option>
-                <option value="Litografía y Medallas">Litografía y Medallas</option>
-                <option value="Rotulación de Vehículos">Rotulación de Vehículos</option>
-                <option value="Branding Corporativo">Branding Corporativo</option>
-                <option value="Impresión Digital y Offset">Impresión Digital y Offset</option>
-                <option value="Pancartas y Avisos">Pancartas y Avisos</option>
-                <option value="Artes Gráficas para Eventos">Artes Gráficas para Eventos</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="municipio" class="form-label">Tu Municipio</label>
-              <select class="form-select" id="municipio" required>
-                <option value="" selected disabled>Selecciona tu municipio...</option>
-                <option value="Alberto Arvelo Torrealba">Alberto Arvelo Torrealba</option>
-                <option value="Andrés Eloy Blanco">Andrés Eloy Blanco</option>
-                <option value="Antonio José de Sucre">Antonio José de Sucre</option>
-                <option value="Arismendi">Arismendi</option>
-                <option value="Barinas">Barinas</option>
-                <option value="Bolívar">Bilívar</option>
-                <option value="Cruz Paredes">Cruz Paredes</option>
-                <option value="Ezequiel Zamora">Ezequiel Zamora</option>
-                <option value="Obispos">Obispos</option>
-                <option value="Pedraza">Pedraza</option>
-                <option value="Rojas">Rojas</option>
-                <option value="Sosa">Sosa</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label for="mensaje" class="form-label">Describe tu proyecto</label>
-              <textarea class="form-control" id="mensaje" rows="4" placeholder="Ej: Necesito una valla de 3x6 metros para mi negocio. Quiero que incluya mi logo y un número de teléfono."></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-lg w-100">
-                <i class="fab fa-whatsapp me-2"></i>Enviar por WhatsApp
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-black text-white-50 py-4 text-center">
-  <div class="container">
-    <p class="mb-0">&copy; 2024 Christian Molina 🟢 Publicidad Creativa. Todos los derechos reservados.</p>
-    <div class="mt-2">
-      <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="text-white-50"><i class="fab fa-youtube"></i></a>
-    </div>
-  </div>
-</footer>
-
-<!-- WhatsApp Float -->
-<a href="https://wa.me/584143544153" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Custom JS -->
-<script src="js/script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
