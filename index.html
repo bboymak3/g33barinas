@@ -466,24 +466,57 @@
     <script>
         function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
 
-        // --- LÓGICA DEL EDITOR ---
+        // --- LÓGICA DEL EDITOR DE CAMISETAS ---
         var canvas = new fabric.Canvas('tshirt-canvas');
-        var shirtUrl = 'images/shirt-template.png'; // ASEGÚRATE DE TENER ESTA IMAGEN
+        
+        // OPCIÓN A: Tu imagen local (Recomendado)
+        var shirtUrl = 'images/shirt-template.png'; 
+        
+        // OPCIÓN B: Imagen de respaldo de internet (Por si no has subido la tuya)
+        // Si no carga tu imagen local, intenta usar esta URL temporal:
+        var backupUrl = 'https://cdn.pixabay.com/photo/2017/01/13/04/56/t-shirt-1976334_960_720.png';
 
         function changeShirtColor(color) {
             document.getElementById('canvas-container').style.backgroundColor = color;
         }
 
-        fabric.Image.fromURL(shirtUrl, function(img) {
-            img.set({
-                scaleX: canvas.width / img.width,
-                scaleY: canvas.height / img.height,
-                selectable: false,
-                evented: false 
+        // Función para cargar la camiseta de fondo
+        function loadShirt(url) {
+            fabric.Image.fromURL(url, function(img) {
+                if(!img) {
+                    console.log("No se pudo cargar la imagen: " + url);
+                    return;
+                }
+                
+                // Ajustar la imagen al tamaño del canvas
+                img.set({
+                    originX: 'left',
+                    originY: 'top'
+                });
+                
+                // Escalar la imagen para que llene el cuadro
+                var scale = Math.min(
+                    canvas.width / img.width, 
+                    canvas.height / img.height
+                );
+                
+                canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
+                    scaleX: canvas.width / img.width,
+                    scaleY: canvas.height / img.height,
+                    originX: 'left',
+                    originY: 'top'
+                });
             });
-            // canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas)); // Descomenta si usas PNG transparente
-        });
+        }
 
+        // Intentar cargar imagen local, si falla (error 404), cargar la de internet
+        var imgTester = new Image();
+        imgTester.onload = function() { loadShirt(shirtUrl); }; // Si existe local, úsala
+        imgTester.onerror = function() { loadShirt(backupUrl); }; // Si no, usa la de internet
+        imgTester.src = shirtUrl;
+
+
+        // 1. Subir Imagen del Usuario (Logo)
         document.getElementById('imgLoader').onchange = function(e) {
             var reader = new FileReader();
             reader.onload = function(event) {
@@ -491,8 +524,14 @@
                 imgObj.src = event.target.result;
                 imgObj.onload = function() {
                     var image = new fabric.Image(imgObj);
-                    image.scaleToWidth(200);
-                    image.set({ left: 100, top: 100 });
+                    // Ajustar tamaño inicial del logo para que no sea gigante
+                    var scaleFactor = 150 / image.width; 
+                    image.set({
+                        scaleX: scaleFactor,
+                        scaleY: scaleFactor,
+                        left: 120, // Centrado aprox
+                        top: 150
+                    });
                     canvas.add(image);
                     canvas.setActiveObject(image);
                 }
@@ -500,22 +539,38 @@
             reader.readAsDataURL(e.target.files[0]);
         }
 
+        // 2. Agregar Texto
         function addText() {
             var text = document.getElementById("text-string").value;
             if(text === "") return;
-            var textObj = new fabric.Text(text, { left: 100, top: 100, fontFamily: 'Arial', fill: '#fff', fontSize: 30 });
+            var textObj = new fabric.Text(text, { 
+                left: 100, top: 100, 
+                fontFamily: 'Arial', 
+                fill: '#000', 
+                fontSize: 30,
+                fontWeight: 'bold'
+            });
             canvas.add(textObj);
             canvas.setActiveObject(textObj);
         }
 
+        // 3. Borrar Objeto Seleccionado
         function deleteObject() {
             var activeObj = canvas.getActiveObject();
-            if (activeObj) canvas.remove(activeObj);
+            if (activeObj) {
+                canvas.remove(activeObj);
+            }
         }
 
+        // 4. Descargar y Enviar a WhatsApp
         function downloadAndSend() {
+            // Deseleccionar objetos para que no salgan los bordes de selección en la foto
             canvas.discardActiveObject().renderAll();
-            var dataURL = canvas.toDataURL({ format: 'png', quality: 1 });
+            
+            // Multiplicador para mejor calidad
+            var dataURL = canvas.toDataURL({ format: 'png', quality: 1, multiplier: 2 });
+
+            // Crear enlace de descarga
             var link = document.createElement('a');
             link.download = 'mi-diseno-grado33.png';
             link.href = dataURL;
@@ -523,12 +578,13 @@
             link.click();
             document.body.removeChild(link);
 
+            // Abrir WhatsApp
             setTimeout(function() {
                 var phone = "584261728306";
-                var text = "Hola Grado33! Acabo de descargar mi diseño. Te paso la foto para cotizar.";
+                var text = "Hola Grado33! Acabo de crear un diseño en su web y lo descargué. Te paso la foto por aquí para que me la cotices.";
                 var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
                 window.open(url, '_blank');
-            }, 1000);
+            }, 1500);
         }
     </script>
 
