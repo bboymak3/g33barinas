@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Suéteres y Camisetas Personalizadas | Estado Barinas</title>
-    <meta name="description" content="Personaliza tu estilo en Barinas. Suéteres y camisetas personalizadas. Editor en línea. Envíos a todo el estado.">
-    <meta name="keywords" content="camisetas personalizadas barinas, suéteres venezuela, regalos personalizados, estampados de camisas, editor de camisetas, barinas">
+    <meta name="description" content="Personaliza tu estilo en Barinas. Suéteres y camisetas personalizadas. Regalos para el 14 de Febrero, parejas y amigos. Editor en línea.">
+    <meta name="keywords" content="regalos 14 de febrero barinas, franelas de novios venezuela, dia del amor y la amistad regalos, camisas para parejas king queen, tazas personalizadas barinas, regalos para mi novio barinas, franelas de mejores amigas, combos 14f, camisetas personalizadas barinas, suéteres venezuela, editor de camisetas">
     <meta name="geo.region" content="VE-BARINAS">
     
     <link rel="canonical" href="https://personalizados.pages.dev/">
 
     <link rel="icon" type="image/jpeg" href="images/logo-grado33.jpg">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
     <style>
         /* --- VARIABLES --- */
         :root {
-            --primary: #27ae60;      /* Verde */
+            --primary: #27ae60;      /* Verde vibrante */
             --primary-dark: #1e8449; 
-            --secondary: #000000;    /* Negro */
+            --secondary: #000000;    /* Negro puro */
             --accent: #f1c40f;       /* Amarillo */
-            --white: #ffffff;
-            --text-gray: #444444;
-            --bg-editor: #1a1a1a;    /* Fondo oscuro para el editor */
+            --love: #e74c3c;         /* Rojo Amor */
+            --bg-light: #f8f9fa;     
+            --white: #ffffff;        
+            --text-dark: #000000;    
+            --text-gray: #444444;    
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             --max-width: 1200px;
             --header-height: 80px;
         }
@@ -34,13 +37,16 @@
         /* --- RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--secondary); line-height: 1.6; background-color: var(--white); }
+        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
 
         /* --- UTILIDADES --- */
         .container { width: 95%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
         .section-padding { padding: 80px 0; }
         .text-center { text-align: center; }
-        
+        .mb-20 { margin-bottom: 20px; }
+        .mb-40 { margin-bottom: 40px; }
+
+        /* Tipografía */
         h1, h2, h3 { font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
         h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: -1px; color: var(--white); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 50px; text-align: center; position: relative; }
@@ -49,47 +55,77 @@
         p { margin-bottom: 15px; font-size: 1.05rem; color: var(--text-gray); }
 
         /* Botones */
-        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn {
+            display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none;
+            font-weight: 700; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: none;
+            text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
         .btn-primary { background-color: var(--primary); color: var(--white); }
-        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-3px); }
+        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 8px 15px rgba(39, 174, 96, 0.3); }
+        
         .btn-accent { background-color: var(--accent); color: var(--secondary); }
         .btn-accent:hover { background-color: #d4ac0d; transform: translateY(-3px); }
+        
         .btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); }
         .btn-outline:hover { background-color: var(--primary); color: white; }
 
         /* --- HEADER --- */
-        header { background-color: var(--white); height: var(--header-height); position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.1); display: flex; align-items: center; border-bottom: 3px solid var(--primary); }
+        header {
+            background-color: var(--white);
+            height: var(--header-height);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1); display: flex; align-items: center;
+            border-bottom: 3px solid var(--primary);
+        }
         .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         .logo-container img { height: 50px; width: auto; display: block; } 
+
         nav ul { display: flex; list-style: none; gap: 30px; }
         nav a { text-decoration: none; color: var(--secondary); font-weight: 700; font-size: 1rem; transition: color 0.3s; }
         nav a:hover { color: var(--primary); }
+        
         .mobile-menu-btn { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--primary); }
 
         /* --- HERO --- */
-        .hero { height: 85vh; min-height: 600px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('images/portada-grado33-tienda-de-buzos-personalziados-en-rionegro.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding-top: var(--header-height); }
+        .hero {
+            height: 85vh; min-height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('images/portada-grado33-tienda-de-buzos-personalziados-en-rionegro.jpg');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            color: white; padding-top: var(--header-height);
+        }
         .hero-content { max-width: 900px; padding: 20px; }
         .hero-content p { font-size: 1.3rem; color: #f0f0f0; margin-bottom: 40px; font-weight: 400; }
 
         /* --- MUNICIPIOS --- */
         .municipios-section { background-color: var(--secondary); color: white; padding: 20px 0; border-bottom: 5px solid var(--accent); }
         .municipios-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; }
-        .municipios-list li { background: #333; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: white; border: 1px solid var(--primary); }
-        .municipios-section p { color: var(--accent); font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
+        .municipios-list li { background: #333; padding: 6px 12px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); font-size: 0.85rem; font-weight: 600; color: white; border: 1px solid var(--primary); }
+        .municipios-section p { color: var(--accent); font-weight: bold; text-transform: uppercase; }
 
         /* --- GRIDS & CARDS --- */
         .category-intro { max-width: 800px; margin: 0 auto 50px auto; text-align: center; }
-        .cat-section-title { font-size: 2rem; color: var(--secondary); margin: 70px 0 30px 0; text-align: left; border-left: 5px solid var(--accent); padding-left: 15px; background: linear-gradient(90deg, #f0f0f0, transparent); padding: 10px 15px; border-radius: 0 10px 10px 0; }
+        
+        .cat-section-title { 
+            font-size: 2rem; color: var(--secondary); margin: 70px 0 30px 0; 
+            text-align: left; border-left: 5px solid var(--accent); padding-left: 15px; background: linear-gradient(90deg, #f0f0f0, transparent); padding: 10px 15px; border-radius: 0 10px 10px 0;
+        }
         
         .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
         
-        .product-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.4s ease; display: flex; flex-direction: column; border: 1px solid #eee; }
+        .product-card {
+            background: var(--white); border-radius: 15px; overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.4s ease; display: flex; flex-direction: column;
+            border: 1px solid #eee;
+        }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); border-color: var(--accent); }
         
         .card-img-wrapper { height: 320px; overflow: hidden; position: relative; background-color: #eee; display: flex; align-items: center; justify-content: center; }
         .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; max-width: 100%; }
         .product-card:hover .card-img-wrapper img { transform: scale(1.05); }
+        
         .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-body p { font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
 
         /* --- MATERIALES --- */
         .materials-section { background-color: var(--secondary); color: white; padding: 60px 0; }
@@ -99,37 +135,26 @@
         .material-item h4 { color: var(--accent); font-size: 1.2rem; margin-bottom: 10px; }
         .material-item p { color: #ddd; font-size: 0.9rem; }
 
-        /* --- EDITOR DE CAMISETAS (ESTILOS NUEVOS) --- */
-        .editor-section { background-color: var(--bg-editor); color: white; border-top: 5px solid var(--accent); }
-        .editor-container { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 30px; }
-        
-        .canvas-area { border: 2px dashed #444; border-radius: 10px; background: #252525; display: flex; justify-content: center; align-items: center; overflow: hidden; box-shadow: inset 0 0 20px rgba(0,0,0,0.5); }
-        
-        .controls-area { flex: 1; min-width: 300px; max-width: 400px; background: #222; padding: 25px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
-        
-        .control-group { margin-bottom: 20px; }
-        .control-label { display: block; margin-bottom: 10px; font-weight: bold; color: var(--primary); }
-        
-        .color-btn { width: 35px; height: 35px; border-radius: 50%; border: 2px solid #fff; cursor: pointer; display: inline-block; margin-right: 8px; transition: transform 0.2s; }
-        .color-btn:hover { transform: scale(1.2); }
-        
-        .upload-btn { background: #333; color: white; padding: 12px; border-radius: 5px; cursor: pointer; display: block; text-align: center; border: 1px solid #555; transition: 0.3s; }
-        .upload-btn:hover { background: #444; border-color: var(--primary); }
-        
-        .action-btn { width: 100%; padding: 15px; margin-top: 10px; font-size: 1.1rem; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
-        .btn-add-text { background: var(--accent); color: var(--secondary); }
-        .btn-add-text:hover { background: #d4ac0d; }
-        .btn-download { background: #25D366; color: white; margin-top: 20px; }
-        .btn-download:hover { background: #1ebc57; }
+        /* --- BLOG --- */
+        .blog-section { background-color: var(--bg-light); border-top: 1px solid #eee; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .blog-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--primary); }
+        .blog-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .blog-tag { background: var(--secondary); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; font-weight: bold; display: inline-block; margin-bottom: 15px; }
 
         /* --- FAQ --- */
         .faq-section { background-color: var(--white); }
         .faq-item { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+        .faq-item:last-child { border-bottom: none; }
         details { cursor: pointer; }
         summary { font-weight: 700; font-size: 1.1rem; color: var(--secondary); list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+        summary::-webkit-details-marker { display: none; }
         summary::after { content: '+'; font-size: 1.5rem; color: var(--primary); transition: 0.3s; }
         details[open] summary::after { content: '-'; transform: rotate(180deg); color: var(--accent); }
-        .faq-content { color: var(--text-gray); font-size: 1rem; line-height: 1.7; background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); }
+        .faq-content { padding: 10px 0 0 0; color: var(--text-gray); font-size: 1rem; line-height: 1.7; background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); }
+
+        /* --- SEASONAL BANNER --- */
+        .seasonal-banner { background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); color: white; padding: 60px 0; text-align: center; }
 
         /* --- FOOTER --- */
         footer { background-color: var(--secondary); color: #ffffff; padding: 70px 0 20px; border-top: 5px solid var(--primary); }
@@ -137,17 +162,47 @@
         .footer-col h4, .footer-col p, .footer-col li, .footer-col a { color: #ffffff !important; }
         .footer-col h4 { font-size: 1.2rem; margin-bottom: 25px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
         .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
         .footer-col a { text-decoration: none; transition: 0.3s; }
-        .footer-col a:hover { color: var(--accent) !important; padding-left: 5px; }
+        .footer-col a:hover { color: var(--accent) !important; padding-left: 5px; text-decoration: underline; }
 
         /* --- WHATSAPP --- */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 2000; transition: transform 0.3s; text-decoration: none; border: 3px solid white; }
-        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; background-color: #25d366;
+            color: white; width: 65px; height: 65px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 2000; transition: transform 0.3s; text-decoration: none; border: 3px solid white;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
         .whatsapp-float svg { width: 40px; height: 40px; fill: white; }
+
+        /* --- SEO CLOUD --- */
+        .seo-cloud { background-color: #222; padding: 40px 0; border-top: 1px solid #333; }
+        .tag-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .tag-cloud span { background: #333; padding: 8px 15px; border-radius: 4px; border: 1px solid #444; color: #aaa; font-size: 0.85rem; transition: 0.2s; cursor: default; }
+        .tag-cloud span:hover { border-color: var(--accent); color: var(--white); background: #444; }
+
+        /* --- ESTILOS EDITOR --- */
+        .editor-section { background-color: #f0f0f0; border-top: 2px solid var(--primary); }
+        .editor-container { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 30px; }
+        .canvas-area { border: 2px dashed #ccc; border-radius: 10px; background: #fff; display: flex; justify-content: center; align-items: center; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .controls-area { flex: 1; min-width: 300px; max-width: 400px; background: var(--white); padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .control-group { margin-bottom: 20px; }
+        .control-label { display: block; margin-bottom: 10px; font-weight: bold; color: var(--secondary); }
+        .color-btn { width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; cursor: pointer; display: inline-block; margin-right: 5px; transition: 0.2s; }
+        .color-btn:hover { transform: scale(1.1); }
+        .upload-btn { background: #f0f0f0; color: var(--secondary); padding: 10px; border-radius: 5px; cursor: pointer; display: block; text-align: center; border: 1px solid #ccc; font-weight: bold; transition: 0.3s; }
+        .upload-btn:hover { background: #e0e0e0; border-color: var(--primary); }
+        .action-btn { width: 100%; padding: 12px; margin-top: 10px; font-size: 1rem; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; text-transform: uppercase; }
+        .btn-add-text { background: var(--secondary); color: var(--accent); }
+        .btn-delete { background: #e74c3c; color: white; margin-top: 10px; width: auto; padding: 5px 15px; font-size: 0.8rem; }
+        .btn-download { background: var(--primary); color: white; margin-top: 20px; font-size: 1.1rem; padding: 15px; }
+        .btn-download:hover { background: var(--primary-dark); }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
             h1 { font-size: 2.2rem; }
+            .hero-content p { font-size: 1.1rem; }
+            .cat-section-title { text-align: center; border-left: none; border-bottom: 3px solid var(--accent); padding-left: 0; padding-bottom: 10px; margin-top: 50px; background: transparent; }
             .nav-menu { display: none; flex-direction: column; position: absolute; top: var(--header-height); left: 0; width: 100%; background: white; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-bottom: 5px solid var(--primary); }
             .nav-menu.active { display: flex; }
             .mobile-menu-btn { display: block; }
@@ -167,8 +222,10 @@
             <nav>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+                    <li><a href="#amor-y-amistad" onclick="toggleMenu()" style="color: #e74c3c;">❤️ 14 de Feb</a></li>
                     <li><a href="#sueteres" onclick="toggleMenu()">Suéteres</a></li>
-                    <li><a href="#editor" onclick="toggleMenu()">Diseñar</a></li> <li><a href="#catalogo-completo" onclick="toggleMenu()">Catálogo</a></li>
+                    <li><a href="#materiales" onclick="toggleMenu()">Materiales</a></li>
+                    <li><a href="#editor" onclick="toggleMenu()">Diseñar</a></li>
                     <li><a href="https://wa.me/584261728306" class="btn btn-primary" style="padding: 10px 20px;">Pedir Ahora</a></li>
                 </ul>
             </nav>
@@ -192,6 +249,74 @@
             <div style="margin-top: 30px;">
                 <a href="#catalogo-completo" class="btn btn-accent">🎨 VER MODELOS</a>
                 <a href="#editor" class="btn btn-outline" style="color: white; border-color: white;">DISEÑAR PROPIA</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="amor-y-amistad" class="section-padding" style="background: linear-gradient(to bottom, #fff0f0, #fff); border-top: 5px solid #e74c3c;">
+        <div class="container">
+            
+            <div class="text-center mb-40">
+                <span style="background: #e74c3c; color: white; padding: 6px 18px; border-radius: 25px; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);">
+                    ❤️ Temporada 14 de Febrero
+                </span>
+                <h2 style="color: #c0392b; margin-top: 20px; font-size: 2.8rem;">Celebra el Amor y la Amistad</h2>
+                <div style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1rem; line-height: 1.8;">
+                    <p>En <strong>Venezuela</strong>, el 14 de febrero es la excusa perfecta para demostrarle a tu persona favorita cuánto la quieres. Ya sea para tu <strong>novio/a</strong>, tu "cuadre", o esos <strong>panas inseparables</strong>, en Grado33 tenemos el detalle que habla por ti.</p>
+                </div>
+            </div>
+
+            <div class="card-grid" style="gap: 40px;">
+                
+                <article class="product-card" style="border: 2px solid #ffcccc;">
+                    <div class="card-img-wrapper">
+                        <img src="images/camisa-personalizada-de-pareja.jpg" alt="Franelas de Novios Venezuela">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="color: #c0392b;">💑 Dúo "Amor Bonito"</h3>
+                        <p>Para esas parejas que combinan en todo. Diseños de King & Queen, Looney Tunes, o sus apodos cariñosos.</p>
+                        <div style="background: #fff5f5; padding: 12px; border-radius: 8px; margin-bottom: 15px; font-size: 0.95rem;">
+                            <strong>Incluye:</strong> 2 Franelas Algodón + Diseño Personalizado.
+                        </div>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20ver%20diseños%20para%20PAREJAS%20del%2014F" class="btn" style="background-color: #e74c3c; color: white; width: 100%; text-align: center;">Ver Diseños Parejas</a>
+                    </div>
+                </article>
+
+                <article class="product-card" style="border: 2px solid #f1c40f;">
+                    <div class="card-img-wrapper">
+                        <img src="images/pareja/buzo-pareja03.jpg" alt="Franelas Mejores Amigos">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="color: #f39c12;">🤜🤛 Combo "Los Panas"</h3>
+                        <p>Porque la amistad también se celebra. Franelas para "Best Friends", compadres o el grupo de la oficina.</p>
+                        <div style="background: #fff9e6; padding: 12px; border-radius: 8px; margin-bottom: 15px; font-size: 0.95rem;">
+                            <strong>Ideas:</strong> Frases de memes o fotos graciosas.
+                        </div>
+                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20hacer%20franelas%20para%20mis%20AMIGOS" class="btn" style="background-color: #f39c12; color: white; width: 100%; text-align: center;">Diseñar para Panas</a>
+                    </div>
+                </article>
+
+                <article class="product-card" style="border: 2px solid #27ae60; transform: scale(1.02); box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                    <div style="background: #27ae60; color: white; text-align: center; padding: 5px; font-weight: bold; font-size: 0.9rem;">🔥 EL MÁS VENDIDO</div>
+                    <div class="card-img-wrapper">
+                        <img src="images/camisa-estampadas-para-familia.jpg" alt="Combo Regalo 14 Febrero">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="color: #27ae60;">🎁 Super Pack 14F</h3>
+                        <p>¿Quieres sorprender de verdad? Llévate el paquete completo y resuelve el regalo de una vez.</p>
+                        <ul style="list-style: none; margin-bottom: 15px; background: #e8f8f5; padding: 15px; border-radius: 8px;">
+                            <li style="margin-bottom: 5px;">✅ <strong>2 Franelas</strong></li>
+                            <li style="margin-bottom: 5px;">✅ <strong>2 Tazas Mágicas</strong></li>
+                        </ul>
+                        <a href="https://wa.me/584261728306?text=Me%20interesa%20el%20SUPER%20PACK%2014F%20con%20tazas" class="btn" style="background-color: #27ae60; color: white; width: 100%; text-align: center; font-weight: 800;">Apartar Combo Hoy</a>
+                    </div>
+                </article>
+
+            </div>
+            
+            <div style="margin-top: 50px; background: #fff; border: 2px dashed #e74c3c; padding: 20px; border-radius: 10px; text-align: center;">
+                <h4 style="color: #c0392b; margin-bottom: 10px; font-size: 1.3rem;">⚠️ ¡No lo dejes para última hora!</h4>
+                <p style="margin-bottom: 0;">En Barinas todo se mueve rápido. La agenda cierra el <strong>10 de Febrero</strong>. Asegura tu regalo con el 50%.</p>
             </div>
         </div>
     </section>
@@ -328,7 +453,7 @@
         </div>
     </section>
 
-    <section id="catalogo-completo" class="section-padding">
+    <section id="catalogo-completo" class="section-padding blog-section">
         <div class="container">
             <h2>Catálogo Completo por Temática</h2>
             <p class="text-center mb-40">Explora nuestras categorías más populares.</p>
@@ -349,20 +474,61 @@
                 </article>
             </div>
 
+            <h3 class="cat-section-title">Familia y Parejas</h3>
+            <div class="card-grid">
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Día de las Madres"></div>
+                    <div class="card-body"><h3>Día de las Madres y Padres</h3><a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a></div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-pareja.jpg" alt="Parejas"></div>
+                    <div class="card-body"><h3>Parejas y Amigas</h3><a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a></div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Grupos"></div>
+                    <div class="card-body"><h3>Grupos Familiares</h3><a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a></div>
+                </article>
             </div>
+
+            <h3 class="cat-section-title">Trabajo y Empresas</h3>
+            <div class="card-grid">
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-mecanico-personalizada.jpg" alt="Uniformes"></div>
+                    <div class="card-body"><h3>Uniformes y Trabajo</h3><a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a></div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-cumpleaños.jpg" alt="Publicidad"></div>
+                    <div class="card-body"><h3>Publicidad</h3><a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a></div>
+                </article>
+                <article class="product-card">
+                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Esports"></div>
+                    <div class="card-body"><h3>Esports</h3><a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-cloud">
+        <div class="container">
+            <h3 class="text-center" style="margin-bottom: 30px; color: white;">Búsquedas Populares</h3>
+            <div class="tag-cloud">
+                <span>camisetas personalizadas</span> <span>camisas de aniversario</span> <span>camisas de trabajo</span>
+                <span>camisas de empresa</span> <span>camisas sublimadas</span> <span>camisas polo bordadas</span>
+                <span>playeras personalizadas</span> <span>estampado de camisetas</span> <span>sublimación</span>
+            </div>
+        </div>
     </section>
 
     <section id="faq" class="section-padding faq-section">
         <div class="container" style="max-width: 900px;">
             <h2>Preguntas Frecuentes</h2>
-            
             <div class="faq-item"><details><summary>1. ¿Cuál es el pedido mínimo?</summary><div class="faq-content">Desde 1 sola unidad al detal. 10 unidades para precios al mayor.</div></details></div>
             <div class="faq-item"><details><summary>2. ¿Realizan envíos nacionales?</summary><div class="faq-content">¡Sí! Por MRW, Zoom, Libre Express y Tealca a toda Venezuela.</div></details></div>
             <div class="faq-item"><details><summary>3. ¿Qué formatos de imagen aceptan?</summary><div class="faq-content">JPG, PNG, PDF de alta resolución o vectores (AI, CDR).</div></details></div>
             <div class="faq-item"><details><summary>4. ¿Puedo llevar mi propia prenda?</summary><div class="faq-content">Sí, ofrecemos servicio de estampado en prenda del cliente.</div></details></div>
             <div class="faq-item"><details><summary>5. ¿Cuánto tiempo tarda?</summary><div class="faq-content">24-48 horas pedidos pequeños. 3-5 días pedidos grandes.</div></details></div>
             <div class="faq-item"><details><summary>6. ¿Métodos de pago?</summary><div class="faq-content">Pago Móvil, Transferencia, Zelle.</div></details></div>
-            <div class="faq-item"><details><summary>7. ¿Hacen diseños urgentes?</summary><div class="faq-content">Sí, servicio express con recargo (entrega mismo día).</div></details></div>
+            <div class="faq-item"><details><summary>7. ¿Hacen diseños urgentes?</summary><div class="faq-content">Sí, servicio express con recargo.</div></details></div>
             <div class="faq-item"><details><summary>8. ¿Durabilidad?</summary><div class="faq-content">Usamos tintas premium Plastisol y Vinil. Lavar al revés.</div></details></div>
             <div class="faq-item"><details><summary>9. ¿Envíos en Barinas?</summary><div class="faq-content">Sí, delivery en la ciudad y envíos a municipios cercanos.</div></details></div>
             <div class="faq-item"><details><summary>10. ¿Garantía?</summary><div class="faq-content">Enviamos foto de prueba antes de la producción final.</div></details></div>
@@ -371,8 +537,8 @@
 
     <section id="editor" class="section-padding editor-section">
         <div class="container">
-            <h2 style="text-align: center; color: white;">Taller Creativo: Diseña tu Franela</h2>
-            <p class="text-center" style="color: #ccc; margin-bottom: 40px;">Sube tu imagen, agrega texto y descarga la vista previa para pedirla.</p>
+            <h2 class="text-center">Taller Creativo: Diseña tu Franela</h2>
+            <p class="text-center" style="margin-bottom: 40px;">Sube tu imagen, agrega texto y descárgala para pedirla.</p>
             
             <div class="editor-container">
                 <div class="canvas-area" id="canvas-container">
@@ -400,15 +566,15 @@
 
                     <div class="control-group">
                         <span class="control-label">3. Texto:</span>
-                        <input type="text" id="text-string" placeholder="Tu frase aquí..." style="width: 100%; padding: 10px; margin-bottom: 5px;">
+                        <input type="text" id="text-string" placeholder="Tu frase aquí..." style="width: 100%; padding: 10px; margin-bottom: 5px; border: 1px solid #ddd;">
                         <button class="action-btn btn-add-text" onclick="addText()">Agregar</button>
                     </div>
 
                     <div class="control-group" style="margin-top: 10px;">
-                        <button onclick="deleteObject()" style="background: #c0392b; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Borrar Selección</button>
+                        <button onclick="deleteObject()" class="action-btn btn-delete">Borrar Selección</button>
                     </div>
 
-                    <div style="border-top: 1px solid #444; margin-top: 20px; padding-top: 20px;">
+                    <div style="border-top: 1px solid #ddd; margin-top: 20px; padding-top: 20px;">
                         <button class="action-btn btn-download" onclick="downloadAndSend()">
                             <i class="fab fa-whatsapp"></i> Terminar y Pedir
                         </button>
@@ -421,7 +587,7 @@
     <section class="seasonal-banner">
         <div class="container">
             <h2>🎁 Regalos Inolvidables</h2>
-            <p>Sorprende a tu familia con diseños únicos.</p>
+            <p>Sorprende a tu familia con diseños únicos. Calidad garantizada.</p>
             <br>
             <a href="https://wa.me/584261728306?text=Hola,%20necesito%20un%20regalo%20personalizado" class="btn btn-accent" style="color: black;">Pedir Cotización</a>
         </div>
@@ -434,154 +600,69 @@
                     <div class="logo-container" style="margin-bottom:20px;">
                         <img src="images/logo-grado33.jpg" alt="Logo" height="60">
                     </div>
-                    <p>Expertos en estampado y sublimación en Barinas, Venezuela.</p>
+                    <p>Expertos en estampado y sublimación en Barinas, Venezuela. Envíos a todo el estado.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Categorías</h4>
                     <ul>
-                        <li><a href="#camisetas">Camisetas</a></li>
-                        <li><a href="#sueteres">Buzos</a></li>
-                        <li><a href="#editor">Diseñar</a></li>
+                        <li><a href="#camisetas">Camisetas Familia</a></li>
+                        <li><a href="#sueteres">Buzos de Marca</a></li>
+                        <li><a href="#sueteres">Buzos Oversize</a></li>
+                        <li><a href="#materiales">Materiales</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul>
-                        <li>📱 +58 426-1728306</li>
+                        <li>📱 WhatsApp: +58 426-1728306</li>
                         <li>📍 Barinas, Venezuela</li>
                         <li>🚚 Envíos Nacionales</li>
                     </ul>
                 </div>
             </div>
             <div class="text-center" style="border-top: 1px solid #333; padding-top: 20px;">
-                <p>&copy; 2026 EstilosGrado33. Todos los derechos reservados.</p>
+                <p>&copy; 2023 EstilosGrado33. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/584261728306" class="whatsapp-float" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <a href="https://wa.me/584261728306" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
     </a>
 
-    
-<section id="amor-y-amistad" class="section-padding" style="background: linear-gradient(to bottom, #fff0f0, #fff); border-top: 5px solid #e74c3c;">
-        <div class="container">
-            
-            <div class="text-center mb-40">
-                <span style="background: #e74c3c; color: white; padding: 6px 18px; border-radius: 25px; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);">
-                    ❤️ Temporada 14 de Febrero
-                </span>
-                
-                <h2 style="color: #c0392b; margin-top: 20px; font-size: 2.8rem;">Celebra el Amor y la Amistad</h2>
-                
-                <div style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1rem; line-height: 1.8;">
-                    <p>En <strong>Venezuela</strong>, el 14 de febrero es la excusa perfecta para demostrarle a tu persona favorita cuánto la quieres. Ya sea para tu <strong>novio/a</strong>, tu "cuadre", o esos <strong>panas inseparables</strong>, en Grado33 tenemos el detalle que habla por ti.</p>
-                    <p>Olvídate de los chocolates que se acaban rápido. Regala algo que dure: <strong>Franelas personalizadas que cuentan su historia.</strong></p>
-                </div>
-            </div>
-
-            <div class="card-grid" style="gap: 40px;">
-                
-                <article class="product-card" style="border: 2px solid #ffcccc; position: relative;">
-                    <div class="card-img-wrapper">
-                        <img src="images/camisa-personalizada-de-pareja.jpg" alt="Franelas de Novios Venezuela">
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: #c0392b;">💑 Dúo "Amor Bonito"</h3>
-                        <p>Para esas parejas que combinan en todo. Diseños de King & Queen, Looney Tunes, o sus apodos cariñosos.</p>
-                        <div style="background: #fff5f5; padding: 12px; border-radius: 8px; margin-bottom: 15px; font-size: 0.95rem;">
-                            <strong>Incluye:</strong> 2 Franelas Algodón + Diseño Personalizado con Fecha o Nombres.
-                        </div>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20ver%20diseños%20para%20PAREJAS%20del%2014F" class="btn" style="background-color: #e74c3c; color: white; width: 100%; text-align: center; box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);">
-                            Ver Diseños Parejas
-                        </a>
-                    </div>
-                </article>
-
-                <article class="product-card" style="border: 2px solid #f1c40f;">
-                    <div class="card-img-wrapper">
-                        <img src="images/pareja/buzo-pareja03.jpg" alt="Franelas Mejores Amigos">
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: #f39c12;">🤜🤛 Combo "Los Panas"</h3>
-                        <p>Porque la amistad también se celebra. Franelas para "Best Friends", compadres o el grupo de la oficina.</p>
-                        <div style="background: #fff9e6; padding: 12px; border-radius: 8px; margin-bottom: 15px; font-size: 0.95rem;">
-                            <strong>Ideas:</strong> Frases de memes, fotos graciosas del grupo o logos de su team.
-                        </div>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20hacer%20franelas%20para%20mis%20AMIGOS" class="btn" style="background-color: #f39c12; color: white; width: 100%; text-align: center; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
-                            Diseñar para Panas
-                        </a>
-                    </div>
-                </article>
-
-                <article class="product-card" style="border: 2px solid #27ae60; transform: scale(1.02); box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                    <div style="background: #27ae60; color: white; text-align: center; padding: 5px; font-weight: bold; font-size: 0.9rem;">
-                        🔥 EL MÁS VENDIDO EN BARINAS
-                    </div>
-                    <div class="card-img-wrapper">
-                        <img src="images/camisa-estampadas-para-familia.jpg" alt="Combo Regalo 14 Febrero">
-                    </div>
-                    <div class="card-body">
-                        <h3 style="color: #27ae60;">🎁 Super Pack 14F</h3>
-                        <p>¿Quieres sorprender de verdad? Llévate el paquete completo y resuelve el regalo de una vez.</p>
-                        <ul style="list-style: none; margin-bottom: 15px; background: #e8f8f5; padding: 15px; border-radius: 8px;">
-                            <li style="margin-bottom: 5px;">✅ <strong>2 Franelas</strong> (Cualquier talla)</li>
-                            <li style="margin-bottom: 5px;">✅ <strong>2 Tazas Mágicas</strong> (Cambian con calor)</li>
-                            <li style="margin-bottom: 5px;">✅ <strong>1 Gorra</strong> (Opcional)</li>
-                        </ul>
-                        <a href="https://wa.me/584261728306?text=Me%20interesa%20el%20SUPER%20PACK%2014F%20con%20tazas" class="btn" style="background-color: #27ae60; color: white; width: 100%; text-align: center; font-weight: 800;">
-                            Apartar Combo Hoy
-                        </a>
-                    </div>
-                </article>
-
-            </div>
-            
-            <div style="margin-top: 50px; background: #fff; border: 2px dashed #e74c3c; padding: 20px; border-radius: 10px; text-align: center;">
-                <h4 style="color: #c0392b; margin-bottom: 10px; font-size: 1.3rem;">⚠️ ¡No lo dejes para última hora!</h4>
-                <p style="margin-bottom: 0;">En Barinas todo se mueve rápido. Nuestra agenda de producción para el 14 de Febrero cierra el <strong>10 de Febrero</strong>. Asegura tu regalo personalizado con el 50% de adelanto.</p>
-            </div>
-        </div>
-    </section>
-
-
-
-<script>
-        function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+    <script>
+        // Menú Móvil
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
 
         // --- LÓGICA DEL EDITOR DE CAMISETAS ---
         var canvas = new fabric.Canvas('tshirt-canvas');
         
-        // OPCIÓN A: Tu imagen local (Recomendado)
+        // IMAGEN DE LA CAMISETA (Asegúrate de que 'images/shirt-template.png' exista)
+        // Si no existe, cargará una de respaldo de internet automáticamente
         var shirtUrl = 'images/shirt-template.png'; 
-        
-        // OPCIÓN B: Imagen de respaldo de internet (Por si no has subido la tuya)
-        // Si no carga tu imagen local, intenta usar esta URL temporal:
         var backupUrl = 'https://cdn.pixabay.com/photo/2017/01/13/04/56/t-shirt-1976334_960_720.png';
 
         function changeShirtColor(color) {
             document.getElementById('canvas-container').style.backgroundColor = color;
         }
 
-        // Función para cargar la camiseta de fondo
+        // Función segura para cargar la imagen
         function loadShirt(url) {
             fabric.Image.fromURL(url, function(img) {
-                if(!img) {
-                    console.log("No se pudo cargar la imagen: " + url);
-                    return;
-                }
+                if(!img) return;
                 
-                // Ajustar la imagen al tamaño del canvas
+                // Centrar y escalar
                 img.set({
                     originX: 'left',
                     originY: 'top'
                 });
                 
-                // Escalar la imagen para que llene el cuadro
-                var scale = Math.min(
-                    canvas.width / img.width, 
-                    canvas.height / img.height
-                );
+                var scale = Math.min(canvas.width / img.width, canvas.height / img.height);
                 
                 canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
                     scaleX: canvas.width / img.width,
@@ -592,14 +673,13 @@
             });
         }
 
-        // Intentar cargar imagen local, si falla (error 404), cargar la de internet
+        // Intentar cargar local, si falla, cargar respaldo
         var imgTester = new Image();
-        imgTester.onload = function() { loadShirt(shirtUrl); }; // Si existe local, úsala
-        imgTester.onerror = function() { loadShirt(backupUrl); }; // Si no, usa la de internet
+        imgTester.onload = function() { loadShirt(shirtUrl); };
+        imgTester.onerror = function() { loadShirt(backupUrl); };
         imgTester.src = shirtUrl;
 
-
-        // 1. Subir Imagen del Usuario (Logo)
+        // Subir Imagen del Usuario
         document.getElementById('imgLoader').onchange = function(e) {
             var reader = new FileReader();
             reader.onload = function(event) {
@@ -607,14 +687,8 @@
                 imgObj.src = event.target.result;
                 imgObj.onload = function() {
                     var image = new fabric.Image(imgObj);
-                    // Ajustar tamaño inicial del logo para que no sea gigante
                     var scaleFactor = 150 / image.width; 
-                    image.set({
-                        scaleX: scaleFactor,
-                        scaleY: scaleFactor,
-                        left: 120, // Centrado aprox
-                        top: 150
-                    });
+                    image.set({ scaleX: scaleFactor, scaleY: scaleFactor, left: 120, top: 150 });
                     canvas.add(image);
                     canvas.setActiveObject(image);
                 }
@@ -622,7 +696,7 @@
             reader.readAsDataURL(e.target.files[0]);
         }
 
-        // 2. Agregar Texto
+        // Agregar Texto
         function addText() {
             var text = document.getElementById("text-string").value;
             if(text === "") return;
@@ -637,7 +711,7 @@
             canvas.setActiveObject(textObj);
         }
 
-        // 3. Borrar Objeto Seleccionado
+        // Borrar Objeto
         function deleteObject() {
             var activeObj = canvas.getActiveObject();
             if (activeObj) {
@@ -645,15 +719,11 @@
             }
         }
 
-        // 4. Descargar y Enviar a WhatsApp
+        // Descargar y Enviar a WhatsApp
         function downloadAndSend() {
-            // Deseleccionar objetos para que no salgan los bordes de selección en la foto
             canvas.discardActiveObject().renderAll();
-            
-            // Multiplicador para mejor calidad
             var dataURL = canvas.toDataURL({ format: 'png', quality: 1, multiplier: 2 });
 
-            // Crear enlace de descarga
             var link = document.createElement('a');
             link.download = 'mi-diseno-grado33.png';
             link.href = dataURL;
@@ -661,13 +731,12 @@
             link.click();
             document.body.removeChild(link);
 
-            // Abrir WhatsApp
             setTimeout(function() {
                 var phone = "584261728306";
                 var text = "Hola Grado33! Acabo de crear un diseño en su web y lo descargué. Te paso la foto por aquí para que me la cotices.";
                 var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
                 window.open(url, '_blank');
-            }, 1500);
+            }, 1000);
         }
     </script>
 
