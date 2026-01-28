@@ -1,712 +1,286 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-VE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grado33 Barinas | Diseña tu Franela en Línea</title>
+    <meta name="description" content="Editor de camisetas en línea Barinas. Personaliza tu franela con DTF, vinil y fotos. Envíos a todo el país.">
     
-    <!-- Título y SEO -->
-    <title>Suéteres y Camisetas Personalizadas | Estado Barinas</title>
-    <meta name="description" content="Personaliza tu estilo en Barinas. Suéteres y camisetas personalizadas. Envíos a todo el estado. Llama al +58 426-1728306.">
-    <meta name="keywords" content="camisetas personalizadas barinas, suéteres venezuela, regalos personalizados, estampados de camisas, camisetas familia, barinas, obispos, socopo, santa bárbara, buzos personalizados">
-    <meta name="geo.region" content="VE-BARINAS">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://personalizados.pages.dev/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="images/logo-grado33.jpg">
-
-    <!-- Estilos CSS ACTUALIZADOS -->
     <style>
-        /* --- VARIABLES (NUEVA PALETA: NEGRO, VERDE, AMARILLO, BLANCO) --- */
+        /* ESTILO: NEÓN & CREATIVO */
         :root {
-            --primary: #27ae60;      /* Verde vibrante para botones y acciones */
-            --primary-dark: #1e8449; /* Verde más oscuro para hover */
-            --secondary: #000000;    /* Negro puro para textos y títulos principales */
-            --accent: #f1c40f;       /* Amarillo para subtítulos y detalles */
-            --bg-light: #f8f9fa;     /* Blanco humo muy suave para secciones alternas */
-            --white: #ffffff;        /* Blanco puro */
-            --text-dark: #000000;    /* Texto oscuro */
-            --text-gray: #444444;    /* Gris oscuro para párrafos */
-            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            --max-width: 1200px;
-            --header-height: 80px;
+            --brand: #00e5ff;    /* Cyan Neón */
+            --accent: #ff007f;   /* Fucsia Neón */
+            --bg: #121212;
+            --surface: #1e1e1e;
+            --text: #ffffff;
         }
-
-        /* --- RESET --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
-
-        /* --- UTILIDADES --- */
-        .container { width: 95%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 80px 0; }
-        .text-center { text-align: center; }
-        .mb-20 { margin-bottom: 20px; }
-        .mb-40 { margin-bottom: 40px; }
-
-        /* Tipografía ACTUALIZADA */
-        h1, h2, h3 { font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
-        h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: -1px; color: var(--white); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 50px; text-align: center; position: relative; }
-        h2::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--accent); margin: 15px auto 0; border-radius: 2px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--bg); color: var(--text); }
+        a { text-decoration: none; color: inherit; }
         
-        /* Subtítulos en Amarillo como pediste */
-        h3 { font-size: 1.5rem; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; font-weight: 700; }
+        /* Header */
+        header { padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--brand); position: sticky; top: 0; background: rgba(18,18,18,0.95); z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .logo span { color: var(--brand); }
+        .btn-cta { background: var(--brand); color: black; padding: 10px 20px; border-radius: 50px; font-weight: bold; cursor: pointer; border: none; }
         
-        p { margin-bottom: 15px; font-size: 1.05rem; color: var(--text-gray); }
-
-        /* Botones ACTUALIZADOS */
-        .btn {
-            display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none;
-            font-weight: 700; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: none;
-            text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn-primary { background-color: var(--primary); color: var(--white); }
-        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 8px 15px rgba(39, 174, 96, 0.3); }
+        /* Hero */
+        .hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle at center, #2a2a2a 0%, #121212 100%); }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
+        .hero span { color: var(--accent); }
         
-        .btn-accent { background-color: var(--accent); color: var(--secondary); }
-        .btn-accent:hover { background-color: #d4ac0d; transform: translateY(-3px); }
-        
-        .btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); }
-        .btn-outline:hover { background-color: var(--primary); color: white; }
-
-        /* --- HEADER --- */
-        header {
-            background-color: var(--white);
-            height: var(--header-height);
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1); display: flex; align-items: center;
-            border-bottom: 3px solid var(--primary);
-        }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo-container img { height: 50px; width: auto; display: block; } 
-
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav a { text-decoration: none; color: var(--secondary); font-weight: 700; font-size: 1rem; transition: color 0.3s; }
-        nav a:hover { color: var(--primary); }
-        
-        .mobile-menu-btn { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--primary); }
-
-        /* --- HERO --- */
-        .hero {
-            height: 85vh; min-height: 600px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('images/portada-grado33-tienda-de-buzos-personalziados-en-rionegro.jpg');
-            background-size: cover; background-position: center;
-            display: flex; align-items: center; justify-content: center; text-align: center;
-            color: white; padding-top: var(--header-height);
-        }
-        .hero-content { max-width: 900px; padding: 20px; }
-        .hero-content p { font-size: 1.3rem; color: #f0f0f0; margin-bottom: 40px; font-weight: 400; }
-
-        /* --- MUNICIPIOS --- */
-        .municipios-section { background-color: var(--secondary); color: white; padding: 20px 0; border-bottom: 5px solid var(--accent); }
-        .municipios-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; }
-        .municipios-list li { background: #333; padding: 6px 12px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); font-size: 0.85rem; font-weight: 600; color: white; border: 1px solid var(--primary); }
-        .municipios-section p { color: var(--accent); font-weight: bold; text-transform: uppercase; }
-
-        /* --- CATEGORIES GRID --- */
-        .category-intro { max-width: 800px; margin: 0 auto 50px auto; text-align: center; }
-        
-        .cat-section-title { 
-            font-size: 2rem; color: var(--secondary); margin: 70px 0 30px 0; 
-            text-align: left; border-left: 5px solid var(--accent); padding-left: 15px; background: linear-gradient(90deg, #f0f0f0, transparent); padding: 10px 15px; border-radius: 0 10px 10px 0;
+        /* --- EDITOR DE CAMISETAS (NUEVO) --- */
+        .editor-section { padding: 40px 20px; background: #1a1a1a; border-top: 2px solid var(--accent); }
+        .editor-container { 
+            display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1200px; margin: 0 auto; 
         }
         
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        
-        /* TARJETA DE PRODUCTO */
-        .product-card {
-            background: var(--white); border-radius: 15px; overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.4s ease; display: flex; flex-direction: column;
-            border: 1px solid #eee;
-        }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); border-color: var(--accent); }
-        
-        .card-img-wrapper { height: 320px; overflow: hidden; position: relative; background-color: #eee; display: flex; align-items: center; justify-content: center; }
-        .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; max-width: 100%; }
-        .product-card:hover .card-img-wrapper img { transform: scale(1.05); }
-        
-        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-body p { font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
-
-        /* --- MATERIALES (NUEVO) --- */
-        .materials-section { background-color: var(--secondary); color: white; padding: 60px 0; }
-        .materials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .material-item { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; text-align: center; border: 1px solid var(--primary); transition: 0.3s; }
-        .material-item:hover { background: var(--primary); transform: translateY(-5px); }
-        .material-item h4 { color: var(--accent); font-size: 1.2rem; margin-bottom: 10px; }
-        .material-item p { color: #ddd; font-size: 0.9rem; }
-
-        /* --- BLOG --- */
-        .blog-section { background-color: var(--bg-light); border-top: 1px solid #eee; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .blog-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--primary); }
-        .blog-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
-        .blog-tag { background: var(--secondary); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; font-weight: bold; display: inline-block; margin-bottom: 15px; }
-
-        /* --- FAQ --- */
-        .faq-section { background-color: var(--white); }
-        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
-        .faq-item:last-child { border-bottom: none; }
-        details { cursor: pointer; }
-        summary { font-weight: 700; font-size: 1.1rem; color: var(--secondary); list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
-        summary::-webkit-details-marker { display: none; }
-        summary::after { content: '+'; font-size: 1.5rem; color: var(--primary); transition: 0.3s; }
-        details[open] summary::after { content: '-'; transform: rotate(180deg); color: var(--accent); }
-        
-        .faq-content { padding: 10px 0 0 0; color: var(--text-gray); font-size: 1rem; line-height: 1.7; background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); }
-
-        /* --- SEASONAL BANNER --- */
-        .seasonal-banner { background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); color: white; padding: 60px 0; text-align: center; }
-
-        /* --- FOOTER --- */
-        footer { background-color: var(--secondary); color: #ffffff; padding: 70px 0 20px; border-top: 5px solid var(--primary); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 50px; }
-        
-        /* Forzar color blanco en todo el footer */
-        .footer-col h4, 
-        .footer-col p, 
-        .footer-col li, 
-        .footer-col a { 
-            color: #ffffff !important; 
+        .canvas-area {
+            position: relative;
+            border: 2px dashed #444;
+            border-radius: 10px;
+            background: #252525;
+            display: flex; justify-content: center; align-items: center;
+            overflow: hidden;
         }
         
-        .footer-col h4 { font-size: 1.2rem; margin-bottom: 25px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 12px; }
-        .footer-col a { text-decoration: none; transition: 0.3s; }
-        .footer-col a:hover { color: var(--accent) !important; padding-left: 5px; text-decoration: underline; }
-
-        /* --- WHATSAPP --- */
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background-color: #25d366;
-            color: white; width: 65px; height: 65px; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 2000; transition: transform 0.3s; text-decoration: none; border: 3px solid white;
+        .controls-area {
+            flex: 1; min-width: 300px; max-width: 400px;
+            background: #222; padding: 25px; border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
-        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
-        .whatsapp-float svg { width: 40px; height: 40px; fill: white; }
+        
+        .control-group { margin-bottom: 20px; }
+        .control-label { display: block; margin-bottom: 10px; font-weight: bold; color: var(--brand); }
+        
+        .color-btn { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; cursor: pointer; display: inline-block; margin-right: 5px; }
+        
+        .upload-btn {
+            background: #333; color: white; padding: 10px; border-radius: 5px; cursor: pointer; display: block; text-align: center; border: 1px solid #555;
+        }
+        .upload-btn:hover { background: #444; border-color: var(--brand); }
+        
+        .action-btn {
+            width: 100%; padding: 15px; margin-top: 10px; font-size: 1.1rem; font-weight: bold;
+            border: none; border-radius: 5px; cursor: pointer; text-transform: uppercase;
+        }
+        .btn-add-text { background: var(--accent); color: white; }
+        .btn-download { background: #25D366; color: white; margin-top: 20px; }
+        
+        /* Grid Servicios */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .card { background: var(--surface); border-radius: 10px; overflow: hidden; transition: 0.3s; border: 1px solid #333; }
+        .card:hover { border-color: var(--brand); transform: translateY(-5px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card h3 { margin-bottom: 10px; color: var(--brand); }
+        
+        /* Footer */
+        footer { text-align: center; padding: 40px; background: black; color: #666; }
 
-        /* --- SEO CLOUD --- */
-        .seo-cloud { background-color: #222; padding: 40px 0; border-top: 1px solid #333; }
-        .tag-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .tag-cloud span { background: #333; padding: 8px 15px; border-radius: 4px; border: 1px solid #444; color: #aaa; font-size: 0.85rem; transition: 0.2s; cursor: default; }
-        .tag-cloud span:hover { border-color: var(--accent); color: var(--white); background: #444; }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 900px) {
-            h1 { font-size: 2.2rem; }
-            .hero-content p { font-size: 1.1rem; }
-            .cat-section-title { text-align: center; border-left: none; border-bottom: 3px solid var(--accent); padding-left: 0; padding-bottom: 10px; margin-top: 50px; background: transparent; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: var(--header-height); left: 0; width: 100%; background: white; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-bottom: 5px solid var(--primary); }
-            .nav-menu.active { display: flex; }
-            .mobile-menu-btn { display: block; }
+        /* Botón WhatsApp */
+        .wap { position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 0 10px var(--brand); z-index: 2000;}
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .editor-container { flex-direction: column; }
+            .canvas-area canvas { max-width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
-        <div class="container nav-container">
-            <a href="#" class="logo-container">
-                <img src="images/logo-grado33.jpg" alt="Estilos Grado33 Logo">
-            </a>
-            <button class="mobile-menu-btn" aria-label="Menú" onclick="toggleMenu()">☰</button>
-            <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
-                    <li><a href="#sueteres" onclick="toggleMenu()">Suéteres</a></li>
-                    <li><a href="#materiales" onclick="toggleMenu()">Materiales</a></li>
-                    <li><a href="#catalogo-completo" onclick="toggleMenu()">Catálogo</a></li>
-                    <li><a href="https://wa.me/584261728306" class="btn btn-primary" style="padding: 10px 20px;">Pedir Ahora</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo">Grado<span>33</span></div>
+        <a href="#editor" class="btn-cta">Diseñar Ahora</a>
     </header>
 
-    <!-- Barra de Municipios (Negro y Amarillo) -->
-    <div class="municipios-section">
-        <div class="container text-center">
-            <p>Cubrimos todo el Estado Barinas y envíos nacionales</p>
-            <ul class="municipios-list">
-                <li>Barinas</li> <li>Santa Bárbara</li> <li>Obispos</li> <li>Socopó</li> <li>Arismendi</li>
-                <li>Bolívar</li> <li>Cruz Paredes</li> <li>Ezequiel Zamora</li> <li>Pedro Briceño</li> <li>Rojas</li> <li>Sosa</li> <li>Alberto Arvelo</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <h1>Diseños de Alto Impacto</h1>
-            <p>La mejor tienda de **Suéteres y Camisetas Personalizadas** en Barinas. Colores vibrantes, telas de calidad y envíos rápidos.</p>
-            <div style="margin-top: 30px;">
-                <a href="#catalogo-completo" class="btn btn-accent">🎨 VER MODELOS</a>
-                <a href="#faq" class="btn btn-outline" style="color: white; border-color: white;">DUDAS</a>
-            </div>
+    <section class="hero">
+        <div>
+            <h1>Personaliza tu <span>Flow</span></h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Crea tu propia franela en segundos. Sube tu imagen y posiciónala.</p>
+            <a href="#editor" class="btn-cta" style="background: var(--accent); color: white;">PROBAR EDITOR</a>
         </div>
     </section>
 
-    <!-- Main Catalog / Suéteres -->
-    <section id="sueteres" class="section-padding">
-        <div class="container">
-            <div class="category-intro">
-                <h2>Categorías de Suéteres</h2>
-                <p>Selecciona el suéter base para tu diseño personalizado.</p>
-            </div>
-
-            <!-- CATEGORIA 1: MARCA -->
-            <h3 class="cat-section-title">Suéteres de Marca</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama01.jpg" alt="Suéter Adidas Mujer"></div>
-                    <div class="card-body">
-                        <h3>Suéteres Adidas y Nike</h3>
-                        <p>Personaliza los modelos más buscados. Buzos Adidas (Essentials, Originals) y Buzos Nike (Icon Clash, Running).</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20de%20marca" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama02.jpg" alt="Suéter Puma Mujer"></div>
-                    <div class="card-body">
-                        <h3>Estilo Deportivo Puma</h3>
-                        <p>Buzos Puma de estilo deportivo y casual. Perfectos para estampar logos de gimnasio o equipos.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20Puma" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama03.jpg" alt="Suéter Running Mujer"></div>
-                    <div class="card-body">
-                        <h3>Tecnología Running</h3>
-                        <p>Modelos técnicos listos para recibir tu nombre o número en dorado o plateado.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20Running" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- CATEGORIA 2: OVERSIZE -->
-            <h3 class="cat-section-title">Suéteres Oversize Personalizados</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero01.jpg" alt="Suéter Oversize Hombre"></div>
-                    <div class="card-body">
-                        <h3>La Tendencia Oversize</h3>
-                        <p>Nuestros suéteres oversize en algodón premium son el canvas perfecto para tu creatividad.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Oversize" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero02.jpg" alt="Suéter Oversize Urbano"></div>
-                    <div class="card-body">
-                        <h3>Streetwear Personalizado</h3>
-                        <p>Disponibles en todos los colores para personalizar. Elige la tela base y envíanos tu arte.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Oversize%20Urbano" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero03.jpg" alt="Suéter Oversize Negro"></div>
-                    <div class="card-body">
-                        <h3>Base en Negro y Gris</h3>
-                        <p>Las bases oscuras son las mejores para diseños vibrantes con neones o blancos.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20Oversize%20Negro" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- CATEGORIA 3: LANA -->
-            <h3 class="cat-section-title">Suéteres de Lana Personalizados</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja01.jpg" alt="Suéter Lana Navidad"></div>
-                    <div class="card-body">
-                        <h3>Calidez con Tu Firma</h3>
-                        <p>Los suéteres de lana más abrigados ahora pueden ser personalizados. Perfectos para invierno.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Lana%20Barinas" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja02.jpg" alt="Suéter Lana Cuello Tortuga"></div>
-                    <div class="card-body">
-                        <h3>Opciones de Cuello y Cortes</h3>
-                        <p>Opciones de cuello tortuga, capucha y largos. Elige el corte que más te abrigue.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Lana%20Cortes" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja03.jpg" alt="Suéter Lana Familia"></div>
-                    <div class="card-body">
-                        <h3>Conjuntos Familiares</h3>
-                        <p>Personaliza el suéter de lana para toda la familia (Papá, Mamá, Hijos).</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Familias" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERÍA DE CAMISETAS (BASE) -->
-    <section id="camisetas" class="section-padding" style="background-color: #f0f0f0;">
-        <div class="container">
-            <h2 class="text-center">Galería de Camisetas Personalizadas</h2>
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
-                <!-- Reutilizando imágenes existentes para la galería principal -->
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Camisa Familia"></div>
-                    <div class="card-body"><h3>Familia</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-mecanico-personalizada.jpg" alt="Camisa Mecánico"></div>
-                    <div class="card-body"><h3>Mecánico</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-dinosaurio.jpg" alt="Camisa Dinosaurio"></div>
-                    <div class="card-body"><h3>Dinosaurio</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Camisa Familia"></div>
-                    <div class="card-body"><h3>Familia</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- NUEVA SECCIÓN: MATERIALES QUE IMPRIMIMOS -->
-    <section id="materiales" class="materials-section">
-        <div class="container">
-            <h2 style="color: white;">Materiales que Imprimimos</h2>
-            <p class="text-center" style="color: #ddd;">Trabajamos con una amplia gama de telas de alta calidad para garantizar la durabilidad de tu diseño.</p>
-            <div class="materials-grid" style="margin-top: 40px;">
-                <div class="material-item">
-                    <h4>Algodón Peached</h4>
-                    <p>Tela suave al tacto, ideal para prendas casuales y uso diario. Muy buena absorción de tintas.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Algodón Ringspun</h4>
-                    <p>Alta resistencia y durabilidad. Hilo de mayor calidad que no se deforma con los lavados.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Dry-Fit / Poliéster</h4>
-                    <p>Tela deportiva ligera que transpira. Perfecta para sublimación a todo color.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Drill / Fanela</h4>
-                    <p>Tela resistente y gruesa, utilizada comúnmente para uniformes de trabajo y camisas de campo.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Lycra Spandex</h4>
-                    <p>Elasticidad superior. Ideal para ropa deportiva ajustada, leggings y bodys.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Lino Premium</h4>
-                    <p>Elegancia y frescura natural. Perfecto para camisas de vestir de alta gama.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NUEVA SECCIÓN: CATÁLOGO COMPLETO (KEYWORDS) -->
-    <section id="catalogo-completo" class="section-padding blog-section">
-        <div class="container">
-            <h2>Catálogo Completo por Temática</h2>
-            <p class="text-center mb-40">Explora nuestras categorías más populares para eventos, empresas y fandoms.</p>
-
-            <!-- SUBSECCIÓN 1: EVENTOS -->
-            <h3 class="cat-section-title">Eventos Especiales</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-cumpleaños.jpg" alt="Camisas de Cumpleaños"></div>
-                    <div class="card-body">
-                        <h3>Cumpleaños</h3>
-                        <p>Camisas-estampadas-para-cumpleaños, playeras-cumpleaños. ¡El regalo perfecto!</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-pareja.jpg" alt="Despedida de Soltera"></div>
-                    <div class="card-body">
-                        <h3>Despedida de Soltera</h3>
-                        <p>Camiseta-despedida-soltera, camisetas-originales. Diseña la noche perfecta.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-navidad.jpg" alt="Camisas Navideñas"></div>
-                    <div class="card-body">
-                        <h3>Navidad</h3>
-                        <p>Camisetas-navidad-personalizadas, playeras-navideñas. Vístete festivo.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- SUBSECCIÓN 2: FAMILIA Y PAREJAS -->
-            <h3 class="cat-section-title">Familia y Parejas</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Día de las Madres"></div>
-                    <div class="card-body">
-                        <h3>Día de las Madres y Padres</h3>
-                        <p>Camisas-del-dia-de-las-madres, playeras-para-papa-e-hija.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-pareja.jpg" alt="Parejas y Amigas"></div>
-                    <div class="card-body">
-                        <h3>Parejas y Amigas</h3>
-                        <p>Blusas-de-amigas-personalizadas, camisas-estampadas-de-parejas.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Grupos Familiares"></div>
-                    <div class="card-body">
-                        <h3>Grupos Familiares</h3>
-                        <p>Camisas-para-toda-la-familia, camisas-estampadas-para-hermanos.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- SUBSECCIÓN 3: TRABAJO Y EMPRESAS -->
-            <h3 class="cat-section-title">Trabajo y Empresas</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-mecanico-personalizada.jpg" alt="Camisas de Trabajo"></div>
-                    <div class="card-body">
-                        <h3>Uniformes y Trabajo</h3>
-                        <p>Camisas-de-trabajo-personalizadas, camisas-polo-personalizadas.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-cumpleaños.jpg" alt="Publicidad"></div>
-                    <div class="card-body">
-                        <h3>Publicidad y Eventos</h3>
-                        <p>Camisas-publicidad, playeras-promocionales, camisas-para-eventos.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Esports y Equipos"></div>
-                    <div class="card-body">
-                        <h3>Esports y Deportes</h3>
-                        <p>Camisas-esports-personalizadas, camisetas-gamers.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- SUBSECCIÓN 4: TÉCNICAS Y ESTILOS -->
-            <h3 class="cat-section-title">Estilos y Técnicas</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Sublimación Full Print"></div>
-                    <div class="card-body">
-                        <h3>Sublimación Full Print</h3>
-                        <p>Camisetas-full-print-personalizadas, camisas-sublimadas-con-fotos.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-sonic.jpg" alt="Serigrafía y Vinilo"></div>
-                    <div class="card-body">
-                        <h3>Serigrafía y Vinilo</h3>
-                        <p>Camisas-serigrafiadas, impresión-vinilo-textil.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-spiderman.jpg" alt=" Bordados"></div>
-                    <div class="card-body">
-                        <h3>Bordados Premium</h3>
-                        <p>Camisas-bordadas-personalizadas, logotipos-empresariales.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEO CLOUD SECTION -->
-    <section class="seo-cloud">
-        <div class="container">
-            <h3 class="text-center" style="margin-bottom: 30px; color: white;">Búsquedas Populares</h3>
-            <div class="tag-cloud">
-                <span>camisetas personalizadas</span>
-                <span>camisas de aniversario</span>
-                <span>camisas de cumpleaños personalizadas</span>
-                <span>camisas de trabajo</span>
-                <span>camisas de empresa</span>
-                <span>camisas estampadas con fotos</span>
-                <span>camisas para día del padre</span>
-                <span>camisas sublimadas</span>
-                <span>camisas polo bordadas</span>
-                <span>playeras personalizadas para boda</span>
-                <span>estampado de camisetas</span>
-                <span>sublimación de playeras</span>
-                <span>camisetas para grupos</span>
-                <span>camisetas personalizadas economicas</span>
-                <span>camisetas originales</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- GUÍA DE PERSONALIZACIÓN -->
-    <section id="proceso" class="section-padding">
-        <div class="container">
-            <h2>Cómo Personalizar</h2>
-            <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <article class="blog-card text-center">
-                    <h3>1️⃣ Elige</h3>
-                    <p>Navega por nuestro catálogo de camisas, playeras y buzos.</p>
-                </article>
-                <article class="blog-card text-center">
-                    <h3>2️⃣ Envía</h3>
-                    <p>Escríbenos por WhatsApp con tu idea, foto o logo.</p>
-                </article>
-                <article class="blog-card text-center">
-                    <h3>3️⃣ Recibe</h3>
-                    <p>Aprobamos el diseño, producimos y enviamos.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ ACTUALIZADO (10 PREGUNTAS) -->
-    <section id="faq" class="section-padding faq-section">
-        <div class="container" style="max-width: 900px;">
-            <h2>Preguntas Frecuentes</h2>
+    <section id="editor" class="editor-section">
+        <h2 style="text-align: center; margin-bottom: 30px; color: white;">Taller Creativo <span style="color:var(--brand)">Grado33</span></h2>
+        
+        <div class="editor-container">
             
-            <div class="faq-item">
-                <details>
-                    <summary>1. ¿Cuál es el pedido mínimo?</summary>
-                    <div class="faq-content">Para ventas al detal (menudeo) trabajamos desde 1 sola unidad. Para pedidos mayoristas y precios especiales, el mínimo es de 10 unidades por diseño.</div>
-                </details>
+            <div class="canvas-area" id="canvas-container">
+                <canvas id="tshirt-canvas" width="400" height="500"></canvas>
             </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>2. ¿Realizan envíos nacionales?</summary>
-                    <div class="faq-content">¡Sí! Realizamos envíos a toda Venezuela mediante empresas de paquetería como MRW, Zoom, Libre Express y Tealca. El tiempo de entrega varía entre 2 a 5 días hábiles dependiendo de la zona.</div>
-                </details>
-            </div>
+            <div class="controls-area">
+                
+                <div class="control-group">
+                    <span class="control-label">1. Color de Franela:</span>
+                    <div class="color-btn" style="background: white;" onclick="changeShirtColor('#ffffff')"></div>
+                    <div class="color-btn" style="background: #111;" onclick="changeShirtColor('#111111')"></div>
+                    <div class="color-btn" style="background: #e74c3c;" onclick="changeShirtColor('#e74c3c')"></div>
+                    <div class="color-btn" style="background: #3498db;" onclick="changeShirtColor('#3498db')"></div>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>3. ¿Qué formatos de imagen aceptan para el diseño?</summary>
-                    <div class="faq-content">Aceptamos imágenes en alta resolución (JPG, PNG, PDF). Si tienes el diseño en formato vectorial (AI, CDR, EPS) es mucho mejor para garantizar la nitidez.</div>
-                </details>
-            </div>
+                <div class="control-group">
+                    <span class="control-label">2. Sube tu Diseño / Foto:</span>
+                    <label class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> Cargar Imagen
+                        <input type="file" id="imgLoader" style="display: none;">
+                    </label>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>4. ¿Puedo llevar mi propia prenda para estampar?</summary>
-                    <div class="faq-content">Sí, ofrecemos el servicio de "prenda del cliente". Trae tu camisa o suéter y nosotros nos encargamos del estampado. El precio es por unidad estampada.</div>
-                </details>
-            </div>
+                <div class="control-group">
+                    <span class="control-label">3. Agregar Texto:</span>
+                    <input type="text" id="text-string" placeholder="Tu frase aquí..." style="width: 100%; padding: 10px; margin-bottom: 5px; background: #333; border: 1px solid #555; color: white;">
+                    <button class="action-btn btn-add-text" onclick="addText()">Agregar Texto</button>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>5. ¿Cuánto tiempo tarda mi pedido?</summary>
-                    <div class="faq-content">Para pedidos personales (1 a 5 prendas): 24 a 48 horas. Para pedidos mayores o corporativos: 3 a 5 días hábiles, dependiendo de la complejidad del diseño.</div>
-                </details>
-            </div>
+                <div class="control-group" style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button onclick="deleteObject()" style="background: #c0392b; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Borrar Selección</button>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>6. ¿Qué métodos de pago aceptan?</summary>
-                    <div class="faq-content">Aceptamos Pago Móvil (Banesco, Venezuela, 100% Banco, Mercantil), Transferencias bancarias y Zelle (para pagos internacionales o rápidos).</div>
-                </details>
-            </div>
+                <div style="border-top: 1px solid #444; margin-top: 20px; padding-top: 20px;">
+                    <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">Al finalizar, se descargará la imagen. Envíala a nuestro WhatsApp.</p>
+                    <button class="action-btn btn-download" onclick="downloadAndSend()">
+                        <i class="fab fa-whatsapp"></i> Terminar y Pedir
+                    </button>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>7. ¿Hacen diseños urgentes (Express)?</summary>
-                    <div class="faq-content">Sí, contamos con servicio prioritario. Tienes tu pedido listo el mismo día (si el diseño es aprobado antes de mediodía). Aplica recargo por urgencia.</div>
-                </details>
             </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>8. ¿Se lavan bien las camisetas? ¿Se borra el diseño?</summary>
-                    <div class="faq-content">Utilizamos tintas de alta calidad (Plastisol y Vinilo Textil) que garantizan durabilidad. Recomendamos lavar la prenda al revés y no usar plancha directamente sobre el estampado.</div>
-                </details>
-            </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>9. ¿Hacen envíos a Barinas ciudad y pueblos cercanos?</summary>
-                    <div class="faq-content">Sí, enviamos a domicilio en Barinas ciudad y realizamos envíos a Obispos, Socopó, Santa Bárbara y otros municipios.</div>
-                </details>
-            </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>10. ¿Garantizan la calidad del estampado?</summary>
-                    <div class="faq-content">Absolutamente. Realizamos una prueba de impresión digital. Antes de producir la cantidad final, enviamos una foto de la primera prenda terminada para tu aprobación total.</div>
-                </details>
-            </div>
-
         </div>
     </section>
 
-    <!-- Seasonal Banner -->
-    <section class="seasonal-banner">
-        <div class="container">
-            <h2>🎁 Regalos Inolvidables</h2>
-            <p>Sorprende a tu familia con diseños únicos. Calidad garantizada.</p>
-            <br>
-            <a href="https://wa.me/584261728306?text=Hola,%20necesito%20un%20regalo%20personalizado" class="btn btn-accent">Pedir Cotización</a>
+    <section id="catalogo" class="grid">
+        <div class="card">
+            <img src="images/pareja/buzo-pareja01.jpg" alt="Franelas Pareja">
+            <div class="card-body">
+                <h3>Regalos & Parejas</h3>
+                <p>Combina con tu persona favorita. Diseños únicos para aniversarios.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/dtf-metro.jpg" alt="DTF por metro">
+            <div class="card-body">
+                <h3>Servicio DTF por Metro</h3>
+                <p>¿Tienes plancha? Te vendemos el metro impreso listo para estampar.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/camisa-mecanico-personalizada.jpg" alt="Uniformes">
+            <div class="card-body">
+                <h3>Uniformes Corporativos</h3>
+                <p>Dale identidad a tu negocio. Bordados y estampados resistentes.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="logo-container" style="margin-bottom:20px;">
-                        <img src="images/logo-grado33.jpg" alt="Logo" height="60">
-                    </div>
-                    <p>Expertos en estampado y sublimación en Barinas, Venezuela. Envíos a todo el estado.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Categorías</h4>
-                    <ul>
-                        <li><a href="#camisetas">Camisetas Familia</a></li>
-                        <li><a href="#sueteres">Buzos de Marca</a></li>
-                        <li><a href="#sueteres">Buzos Oversize</a></li>
-                        <li><a href="#materiales">Materiales</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>📱 WhatsApp: +58 426-1728306</li>
-                        <li>📍 Barinas, Venezuela</li>
-                        <li>🚚 Envíos Nacionales</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center" style="border-top: 1px solid #333; padding-top: 20px;">
-                <p>&copy; 2023 EstilosGrado33. Todos los derechos reservados.</p>
-            </div>
-        </div>
+        <p>📍 Barinas, Venezuela | Envíos Nacionales (MRW, Zoom)</p>
+        <p>© 2026 Estilos Grado33</p>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/584261728306" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-    </a>
+    <a href="https://wa.me/584261728306" class="wap"><i class="fab fa-whatsapp"></i></a>
 
     <script>
-        function toggleMenu() {
-            const nav = document.getElementById('navMenu');
-            nav.classList.toggle('active');
+        // Inicializar Fabric Canvas
+        var canvas = new fabric.Canvas('tshirt-canvas');
+        
+        // Cargar Camiseta de Fondo (Asegúrate de tener 'images/shirt-template.png')
+        // Si no tienes la imagen aún, esto pondrá un cuadro gris de ejemplo
+        var shirtUrl = 'images/shirt-template.png'; 
+        
+        // Función para cambiar color de fondo del canvas (simula color de camiseta)
+        function changeShirtColor(color) {
+            document.getElementById('canvas-container').style.backgroundColor = color;
+        }
+
+        // Cargar imagen de camiseta al inicio (opcional, si es transparente usa el div de fondo)
+        // Puedes comentar esto si solo quieres usar el color de fondo del div
+        fabric.Image.fromURL(shirtUrl, function(img) {
+            img.set({
+                scaleX: canvas.width / img.width,
+                scaleY: canvas.height / img.height,
+                selectable: false,
+                evented: false 
+            });
+            // canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas)); // Descomenta si tienes la imagen PNG transparente
+        });
+
+        // 1. SUBIR IMAGEN
+        document.getElementById('imgLoader').onchange = function(e) {
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var imgObj = new Image();
+                imgObj.src = event.target.result;
+                imgObj.onload = function() {
+                    var image = new fabric.Image(imgObj);
+                    image.scaleToWidth(200); // Tamaño inicial
+                    image.set({
+                        left: 100,
+                        top: 100
+                    });
+                    canvas.add(image);
+                    canvas.setActiveObject(image);
+                }
+            }
+            reader.readAsDataURL(e.target.files[0]);
+        }
+
+        // 2. AGREGAR TEXTO
+        function addText() {
+            var text = document.getElementById("text-string").value;
+            if(text === "") return;
+            
+            var textObj = new fabric.Text(text, {
+                left: 100,
+                top: 100,
+                fontFamily: 'Arial',
+                fill: '#fff',
+                fontSize: 30
+            });
+            canvas.add(textObj);
+            canvas.setActiveObject(textObj);
+        }
+
+        // 3. BORRAR OBJETO
+        function deleteObject() {
+            var activeObj = canvas.getActiveObject();
+            if (activeObj) {
+                canvas.remove(activeObj);
+            }
+        }
+
+        // 4. DESCARGAR Y ENVIAR
+        function downloadAndSend() {
+            // Deseleccionar todo para la foto
+            canvas.discardActiveObject().renderAll();
+            
+            // Convertir a imagen
+            var dataURL = canvas.toDataURL({
+                format: 'png',
+                quality: 1
+            });
+
+            // Crear enlace de descarga automático
+            var link = document.createElement('a');
+            link.download = 'mi-diseño-grado33.png';
+            link.href = dataURL;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Mensaje de WhatsApp
+            setTimeout(function() {
+                var phone = "584261728306";
+                var text = "Hola Grado33! Acabo de crear un diseño en su web y lo descargué. Te paso la foto por aquí para que me la cotices.";
+                var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
+                window.open(url, '_blank');
+            }, 1000);
         }
     </script>
 
