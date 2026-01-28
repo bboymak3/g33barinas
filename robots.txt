@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /images/
+
+# Reemplaza la URL de abajo con tu dominio real de Cloudflare
 Sitemap: https://personalizados.pages.dev/sitemap.xml

@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página Principal -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://personalizados.pages.dev/</loc>
-    <lastmod>2023-10-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://personalizados.pages.dev/images/portada-grado33-tienda-de-buzos-personalziados-en-rionegro.jpg</image:loc>
+      <image:title>Tienda de Estampados Personalizados en Barinas</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://personalizados.pages.dev/images/camisa-personalizada-de-pareja.jpg</image:loc>
+      <image:title>Franelas de Parejas y Enamorados 14 de Febrero</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://personalizados.pages.dev/images/camisa-estampadas-para-familia.jpg</image:loc>
+      <image:title>Camisetas Familiares Personalizadas Venezuela</image:title>
+    </image:image>
+
   </url>
+
 </urlset>
